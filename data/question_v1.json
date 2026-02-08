@@ -208,7 +208,7 @@
           },
           {
             "id": "05",
-            "question_text": "Does the water surface ripple from the placement?",
+            "question_text": "Does the water surface stay perfectly still with no ripples after placement?",
             "dimensions": [
               "motion"
             ],
@@ -330,7 +330,7 @@
           },
           {
             "id": "05",
-            "question_text": "Does the ice cube bob and then settle?",
+            "question_text": "Does the ice cube keep bobbing without settling by the end of the clip?",
             "dimensions": [
               "motion"
             ],
@@ -358,7 +358,7 @@
           },
           {
             "id": "07",
-            "question_text": "Does the ice cube remain near the surface throughout the clip?",
+            "question_text": "Does the ice cube sink well below the surface at any point?",
             "dimensions": [
               "spatial"
             ],
@@ -456,7 +456,7 @@
           },
           {
             "id": "05",
-            "question_text": "Does the toy settle into a stable orientation?",
+            "question_text": "Does the toy keep rocking without settling by the end of the clip?",
             "dimensions": [
               "motion"
             ],
@@ -484,7 +484,7 @@
           },
           {
             "id": "07",
-            "question_text": "Is the surface disturbance caused by the placement?",
+            "question_text": "Is the water surface completely undisturbed when the toy is placed in?",
             "dimensions": [
               "spatial"
             ],
@@ -576,7 +576,7 @@
           },
           {
             "id": "05",
-            "question_text": "Does the plastic bottle settle into a stable position?",
+            "question_text": "Does the plastic bottle keep bobbing without settling by the end of the clip?",
             "dimensions": [
               "motion"
             ],
@@ -604,7 +604,7 @@
           },
           {
             "id": "07",
-            "question_text": "Does the plastic bottle avoid sinking during the clip?",
+            "question_text": "Does the plastic bottle sink noticeably below the surface during the clip?",
             "dimensions": [
               "spatial"
             ],
@@ -702,7 +702,7 @@
           },
           {
             "id": "05",
-            "question_text": "Does the bubbles appear after the iron enters the water?",
+            "question_text": "Do bubbles appear after the iron enters the water?",
             "dimensions": [
               "existence"
             ],
@@ -825,7 +825,7 @@
           },
           {
             "id": "05",
-            "question_text": "Does the bolt's speed appear reduced by water resistance?",
+            "question_text": "Does the rock's speed appear reduced by water resistance?",
             "dimensions": [
               "existence"
             ],
@@ -1131,7 +1131,7 @@
         "questions": [
           {
             "id": "01",
-            "question_text": "Does the cube enter the water?",
+            "question_text": "Does the cup enter the water?",
             "dimensions": [
               "spatial"
             ],
@@ -1145,7 +1145,7 @@
           },
           {
             "id": "02",
-            "question_text": "Does the cube sink rather than float?",
+            "question_text": "Does the cup sink rather than float?",
             "dimensions": [
               "material",
               "spatial"
@@ -1160,7 +1160,7 @@
           },
           {
             "id": "03",
-            "question_text": "Does the cube move downward through the water?",
+            "question_text": "Does the cup move downward through the water?",
             "dimensions": [
               "direction"
             ],
@@ -1190,7 +1190,7 @@
           },
           {
             "id": "05",
-            "question_text": "Does the cube's descent appear slowed by water resistance?",
+            "question_text": "Does the cup's descent appear slowed by water resistance?",
             "dimensions": [
               "existence"
             ],
@@ -1204,7 +1204,7 @@
           },
           {
             "id": "06",
-            "question_text": "Does the water surface deform when the cube enters?",
+            "question_text": "Does the water surface deform when the cup enters?",
             "dimensions": [
               "motion"
             ],
@@ -1218,7 +1218,7 @@
           },
           {
             "id": "07",
-            "question_text": "Does the cube reach the bottom within the clip?",
+            "question_text": "Does the cup reach the bottom within the clip?",
             "dimensions": [
               "spatial"
             ],
@@ -1232,7 +1232,7 @@
           },
           {
             "id": "10",
-            "question_text": "Is the final state the cube resting at the bottom?",
+            "question_text": "Is the final state the cup resting at the bottom?",
             "dimensions": [
               "spatial"
             ],
@@ -1270,7 +1270,7 @@
           },
           {
             "id": "02",
-            "question_text": "Is there shadow appearing at the bending or folding areas?",
+            "question_text": "Are there visible shading changes at folds where the fabric bends?",
             "dimensions": [
               "existence"
             ],
@@ -1284,7 +1284,7 @@
           },
           {
             "id": "03",
-            "question_text": ": \"Does the flag appear to have wrinkles or folding on the surface like silk? Material, existence",
+            "question_text": "Does the flag show visible wrinkles and folds as it waves?",
             "dimensions": [
               "existence",
               "shape",
@@ -1316,7 +1316,7 @@
           },
           {
             "id": "05",
-            "question_text": ": \"Is the flag attached securely to the pole throughout the video? Spatial",
+            "question_text": "Does the flag remain attached to the pole throughout the clip?",
             "dimensions": [
               "motion"
             ],
@@ -1460,7 +1460,7 @@
           },
           {
             "id": "06",
-            "question_text": "Does the curtain's movement appear to be influenced by gravity?",
+            "question_text": "Does the curtain sag downward between gusts, consistent with gravity?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -1490,7 +1490,7 @@
           },
           {
             "id": "11",
-            "question_text": "Is the curtain's movement consistent with the expected effects of air resistance?",
+            "question_text": "Does the curtain slow and lag slightly as it changes direction, rather than snapping instantly?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -1616,7 +1616,7 @@
           },
           {
             "id": "11",
-            "question_text": "Does the speed of the ripples decrease as they move further from the pulling point?",
+            "question_text": "Do the ripples speed up as they travel across the tablecloth?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -1740,7 +1740,7 @@
           },
           {
             "id": "11",
-            "question_text": "Does the scarf avoid passing through the solid parts of the chair?",
+            "question_text": "Does the scarf clip through the chair parts instead of colliding with them?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -1804,7 +1804,7 @@
           },
           {
             "id": "04",
-            "question_text": "Is the motion of the flag smooth as it transitions from fluttering to hanging?",
+            "question_text": "Is the collapse abrupt and jerky rather than smooth?",
             "dimensions": [
               "motion"
             ],
@@ -1864,7 +1864,7 @@
           },
           {
             "id": "11",
-            "question_text": "Does the flag remain attached to the pole after collapsing?",
+            "question_text": "Does the flag detach from the pole when it collapses?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -1932,7 +1932,7 @@
           },
           {
             "id": "04",
-            "question_text": "Does the direction reverse after the collision?",
+            "question_text": "Does the football continue moving toward the wall after the collision?",
             "dimensions": [
               "direction"
             ],
@@ -2056,7 +2056,7 @@
           },
           {
             "id": "04",
-            "question_text": "Does the ball reverse direction after the collision?",
+            "question_text": "Does the ball continue moving toward the wall after the collision?",
             "dimensions": [
               "direction"
             ],
@@ -2084,7 +2084,7 @@
           },
           {
             "id": "07",
-            "question_text": "Does the wall remain unmoved?",
+            "question_text": "Does the wall visibly move from the impact?",
             "dimensions": [
               "motion",
               "material"
@@ -2180,7 +2180,7 @@
           },
           {
             "id": "04",
-            "question_text": "Does the ball change direction at the moment of impact?",
+            "question_text": "Does the ball continue past the racket without reversing direction?",
             "dimensions": [
               "direction"
             ],
@@ -2208,7 +2208,7 @@
           },
           {
             "id": "07",
-            "question_text": "Does the ball remain intact after impact?",
+            "question_text": "Does the ball visibly break apart on impact?",
             "dimensions": [
               "motion",
               "material"
@@ -2302,7 +2302,7 @@
           },
           {
             "id": "04",
-            "question_text": "Does the direction of motion reverse or sharply change at impact?",
+            "question_text": "Does the ball continue moving downward after impact instead of reversing?",
             "dimensions": [
               "direction"
             ],
@@ -2330,7 +2330,7 @@
           },
           {
             "id": "07",
-            "question_text": "Does the basketball remain mostly intact?",
+            "question_text": "Does the basketball break apart on impact?",
             "dimensions": [
               "motion",
               "material"
@@ -2426,7 +2426,7 @@
           },
           {
             "id": "04",
-            "question_text": "Do the rings deform (change shape) briefly during the impact?",
+            "question_text": "Do the rings stay perfectly rigid with no visible deformation during impact?",
             "dimensions": [
               "direction"
             ],
@@ -2454,7 +2454,7 @@
           },
           {
             "id": "07",
-            "question_text": "Do the rings avoid sticking together?",
+            "question_text": "Do the rings stick together after the collision?",
             "dimensions": [
               "motion",
               "material"
@@ -3056,7 +3056,7 @@
           },
           {
             "id": "05",
-            "question_text": "Is the deformation of the rice cake permanent (plastic)?",
+            "question_text": "Does the indentation remain visible after the mallet lifts?",
             "dimensions": [
               "direction",
               "material"
@@ -3099,7 +3099,7 @@
           },
           {
             "id": "09",
-            "question_text": "Does the rice cake absorb the impact rather than acting like a spring?",
+            "question_text": "Does the rice cake fail to spring back upward after the hit?",
             "dimensions": [
               "size"
             ],
@@ -3196,7 +3196,7 @@
           },
           {
             "id": "09",
-            "question_text": "Is the hand still around the stress ball as it squeezing?",
+            "question_text": "Is the hand still in contact with the stress ball while it is squeezed?",
             "dimensions": [
               "spatial"
             ],
@@ -3292,7 +3292,7 @@
           },
           {
             "id": "07",
-            "question_text": "Is the motion of the rubber band consistent with the effects of elasticity?",
+            "question_text": "Does the rubber band stay stretched and fail to return after release?",
             "dimensions": [
               "number"
             ],
@@ -3339,7 +3339,7 @@
           },
           {
             "id": "12",
-            "question_text": "Does the rubber band exhibit any signs of permanent deformation after snapping back?",
+            "question_text": "Does the rubber band remain stretched after snapping back?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -3353,7 +3353,7 @@
           },
           {
             "id": "15",
-            "question_text": "Is the rubber band free from any external forces other than the initial stretch and release?",
+            "question_text": "Are both ends released (no hand still pulling) when it snaps back?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -3431,7 +3431,7 @@
           },
           {
             "id": "08",
-            "question_text": "Does the sponge remain stationary after fully rebounding?",
+            "question_text": "Does the sponge keep moving slightly after fully rebounding?",
             "dimensions": [
               "appearance/texture",
               "material"
@@ -3542,7 +3542,7 @@
           },
           {
             "id": "07",
-            "question_text": "Is the timing of the person's bounce consistent with the trampoline's rebound?",
+            "question_text": "Does the person leave the trampoline surface right after it reaches its lowest point?",
             "dimensions": [
               "number"
             ],
@@ -3558,7 +3558,7 @@
           },
           {
             "id": "08",
-            "question_text": "Does the person maintain contact with the trampoline surface until it reaches its lowest point?",
+            "question_text": "Does the person lose contact before the trampoline surface reaches its lowest point?",
             "dimensions": [
               "appearance/texture",
               "material"
@@ -3587,7 +3587,7 @@
           },
           {
             "id": "12",
-            "question_text": "Does the person appear to be affected by gravity during the jump?",
+            "question_text": "Does the person rise and then fall back down after leaving the trampoline?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -3603,7 +3603,7 @@
           },
           {
             "id": "15",
-            "question_text": "Is the energy transfer between the person and the trampoline consistent with elastic deformation?",
+            "question_text": "Does the trampoline surface visibly recoil upward as the person is launched?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -3671,7 +3671,7 @@
           },
           {
             "id": "07",
-            "question_text": "Is the spring's return to its original shape consistent with elastic material behavior?",
+            "question_text": "Does the spring stay stretched and fail to return after release?",
             "dimensions": [
               "number"
             ],
@@ -3716,7 +3716,7 @@
           },
           {
             "id": "12",
-            "question_text": "Is the spring's behavior consistent with the effects of gravity?",
+            "question_text": "Is the spring hanging or sagging downward while it oscillates?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -3732,7 +3732,7 @@
           },
           {
             "id": "15",
-            "question_text": "Does the spring's motion appear to be affected by any external forces other than the initial pull?",
+            "question_text": "After release, are the hands no longer pulling the spring?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -3854,7 +3854,7 @@
           },
           {
             "id": "15",
-            "question_text": "Does the balloon burst with any external interference?",
+            "question_text": "Is the balloon punctured by a visible object before it bursts?",
             "dimensions": [
               "existence"
             ],
@@ -3972,7 +3972,7 @@
           },
           {
             "id": "15",
-            "question_text": "Does the explosion look energetic enough to match the scale of a gasoline drum?",
+            "question_text": "Does the fireball remain small and contained close to the drum?",
             "dimensions": [
               "existence"
             ],
@@ -4092,7 +4092,7 @@
           },
           {
             "id": "15",
-            "question_text": "Is the final state the needle alone with debris on the floor?",
+            "question_text": "Is there no visible balloon fragment after the pop?",
             "dimensions": [
               "existence"
             ],
@@ -4184,7 +4184,7 @@
           },
           {
             "id": "06",
-            "question_text": "Does the container return to its original shape after the explosion?",
+            "question_text": "Does the container remain burst open after the rupture?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -4212,7 +4212,7 @@
           },
           {
             "id": "15",
-            "question_text": "Is there any visible residue or debris left after the container bursts?",
+            "question_text": "Does the container leave no visible debris or residue after bursting?",
             "dimensions": [
               "existence"
             ],
@@ -4400,7 +4400,7 @@
           },
           {
             "id": "04",
-            "question_text": ": \"Does the wine glass appear to have liquid inside?existence",
+            "question_text": "Is there visible liquid sloshing inside the glass before it hits?",
             "dimensions": [
               "existence",
               "material"
@@ -4525,7 +4525,7 @@
           },
           {
             "id": "04",
-            "question_text": "Do the pieces of the plate scatter outward upon impact?",
+            "question_text": "Do the pieces remain clustered near the impact point rather than scattering far?",
             "dimensions": [
               "existence",
               "material"
@@ -4650,7 +4650,7 @@
           },
           {
             "id": "04",
-            "question_text": "Does the bottle shatter into multiple pieces upon impact with the ground?",
+            "question_text": "Does the bottle remain mostly intact after impact?",
             "dimensions": [
               "existence",
               "material"
@@ -4771,7 +4771,7 @@
           },
           {
             "id": "04",
-            "question_text": "Does the crack in the mirror originate from the point of impact?",
+            "question_text": "Do cracks appear away from the impact point rather than radiating from it?",
             "dimensions": [
               "existence",
               "material"
@@ -4816,7 +4816,7 @@
           },
           {
             "id": "07",
-            "question_text": "Does the mirror show any signs of deformation before the rock hits it?",
+            "question_text": "Does the mirror stay rigid with no visible bend before impact?",
             "dimensions": [
               "spatial"
             ],
@@ -4894,7 +4894,7 @@
           },
           {
             "id": "04",
-            "question_text": "Does the shattering occur exactly at the moment of impact?",
+            "question_text": "Is there a noticeable delay before the vase shatters after impact?",
             "dimensions": [
               "existence",
               "material"
@@ -5019,7 +5019,7 @@
           },
           {
             "id": "05",
-            "question_text": "Does the texture of the wooden block change over time?",
+            "question_text": "Does the block's surface appearance stay consistent over time?",
             "dimensions": [
               "appearance/texture",
               "material"
@@ -5142,7 +5142,7 @@
           },
           {
             "id": "05",
-            "question_text": "Is friction implied to oppose the motion?",
+            "question_text": "Does the book visibly slow down as it slides?",
             "dimensions": [
               "appearance/texture",
               "material"
@@ -5265,7 +5265,7 @@
           },
           {
             "id": "05",
-            "question_text": "Is friction implied to be high?",
+            "question_text": "Does the eraser come to rest after moving only a short distance?",
             "dimensions": [
               "appearance/texture",
               "material"
@@ -5280,7 +5280,7 @@
           },
           {
             "id": "06",
-            "question_text": "Does the eraser avoid sliding a long distance?",
+            "question_text": "Does the eraser slide a long distance before stopping?",
             "dimensions": [
               "existence"
             ],
@@ -5388,7 +5388,7 @@
           },
           {
             "id": "05",
-            "question_text": "Is friction implied to be strong?",
+            "question_text": "Does the box stop after a short slide?",
             "dimensions": [
               "appearance/texture",
               "material"
@@ -5511,7 +5511,7 @@
           },
           {
             "id": "05",
-            "question_text": "Is friction implied to be high?",
+            "question_text": "Does the backpack stop quickly after a small movement?",
             "dimensions": [
               "appearance/texture",
               "material"
@@ -5526,7 +5526,7 @@
           },
           {
             "id": "06",
-            "question_text": "Does the backpack avoid sliding far?",
+            "question_text": "Does the backpack slide a long distance before stopping?",
             "dimensions": [
               "existence"
             ],
@@ -5678,7 +5678,7 @@
           },
           {
             "id": "08",
-            "question_text": "Does the direction remain consistent without random vertical rotation?",
+            "question_text": "Does the stone keep sliding in roughly the same direction without sudden sideways jumps?",
             "dimensions": [
               "direction"
             ],
@@ -5744,7 +5744,7 @@
           },
           {
             "id": "03",
-            "question_text": "Does the puck slow down gradually?",
+            "question_text": "Does the puck slow down abruptly within a short distance?",
             "dimensions": [
               "existence"
             ],
@@ -5772,7 +5772,7 @@
           },
           {
             "id": "05",
-            "question_text": "Is friction small compared to the puck's inertia?",
+            "question_text": "Does the puck keep gliding for a long distance before noticeably slowing?",
             "dimensions": [
               "object"
             ],
@@ -5814,7 +5814,7 @@
           },
           {
             "id": "09",
-            "question_text": "Is there no visible sticking to the surface?",
+            "question_text": "Does the puck visibly stick or jerk to a stop?",
             "dimensions": [
               "shape"
             ],
@@ -5864,7 +5864,7 @@
           },
           {
             "id": "03",
-            "question_text": "Does the disk slow down over time?",
+            "question_text": "Does the disk maintain nearly the same speed across the clip?",
             "dimensions": [
               "existence"
             ],
@@ -5892,7 +5892,7 @@
           },
           {
             "id": "05",
-            "question_text": "Is friction implied to be low?",
+            "question_text": "Does the disk glide a long distance before slowing?",
             "dimensions": [
               "object"
             ],
@@ -5906,7 +5906,7 @@
           },
           {
             "id": "06",
-            "question_text": "Does the disk avoid sudden stops without collision?",
+            "question_text": "Does the disk come to a sudden stop without collision?",
             "dimensions": [
               "existence"
             ],
@@ -5934,7 +5934,7 @@
           },
           {
             "id": "09",
-            "question_text": "Does the speed decrease rather than increase?",
+            "question_text": "Does the disk speed up on its own while sliding?",
             "dimensions": [
               "shape"
             ],
@@ -5984,7 +5984,7 @@
           },
           {
             "id": "03",
-            "question_text": "Does the lego block slow down over time?",
+            "question_text": "Does the lego block maintain nearly the same speed across the clip?",
             "dimensions": [
               "existence"
             ],
@@ -6012,7 +6012,7 @@
           },
           {
             "id": "05",
-            "question_text": "Is friction implied to be low?",
+            "question_text": "Does the lego block glide a long distance before slowing?",
             "dimensions": [
               "object"
             ],
@@ -6026,7 +6026,7 @@
           },
           {
             "id": "06",
-            "question_text": "Does the lego block avoid sudden stops without collision?",
+            "question_text": "Does the lego block come to a sudden stop without collision?",
             "dimensions": [
               "existence"
             ],
@@ -6054,7 +6054,7 @@
           },
           {
             "id": "09",
-            "question_text": "Does the speed decrease rather than increase?",
+            "question_text": "Does the lego block speed up on its own while sliding?",
             "dimensions": [
               "shape"
             ],
@@ -6104,7 +6104,7 @@
           },
           {
             "id": "03",
-            "question_text": "Does the stone slow down gradually?",
+            "question_text": "Does the stone keep nearly constant speed across the clip?",
             "dimensions": [
               "existence"
             ],
@@ -6134,7 +6134,7 @@
           },
           {
             "id": "05",
-            "question_text": "Is friction implied to be low in this scene?",
+            "question_text": "Does the stone slide a long distance before slowing?",
             "dimensions": [
               "object"
             ],
@@ -6148,7 +6148,7 @@
           },
           {
             "id": "06",
-            "question_text": "Does the stone avoid suddenly stopping without collision?",
+            "question_text": "Does the stone stop abruptly without collision?",
             "dimensions": [
               "existence"
             ],
@@ -6178,7 +6178,7 @@
           },
           {
             "id": "09",
-            "question_text": "Does the direction remain mostly consistent?",
+            "question_text": "Does the stone veer or change direction noticeably while sliding?",
             "dimensions": [
               "shape"
             ],
@@ -6426,7 +6426,7 @@
           },
           {
             "id": "14",
-            "question_text": "Is the sand visibly affected by air resistance as it falls?",
+            "question_text": "Do falling grains spread slightly as they drop through the air?",
             "dimensions": [
               "object"
             ],
@@ -6474,7 +6474,7 @@
           },
           {
             "id": "03",
-            "question_text": "Does the ball partially sink into the sand after impact?",
+            "question_text": "Does the ball remain fully on top of the sand without sinking?",
             "dimensions": [
               "size",
               "motion"
@@ -6567,7 +6567,7 @@
         "questions": [
           {
             "id": "01",
-            "question_text": "Does the hand make contact with the snow before the sand deforms?",
+            "question_text": "Does the hand make contact with the snow before it deforms?",
             "dimensions": [
               "direction"
             ],
@@ -6595,7 +6595,7 @@
           },
           {
             "id": "03",
-            "question_text": "Does the snow move downward as the hand applies pressure?",
+            "question_text": "Does the snow stay at the same height with no compression under the hand?",
             "dimensions": [
               "size",
               "motion"
@@ -6716,7 +6716,7 @@
           },
           {
             "id": "03",
-            "question_text": "Is the motion of the grain continuous as it collapses?",
+            "question_text": "Does the collapse happen in a single sudden jump with no flowing motion?",
             "dimensions": [
               "size",
               "motion"
@@ -6793,7 +6793,7 @@
           },
           {
             "id": "14",
-            "question_text": "Is the collapse of the grain mound a result of exceeding a critical angle of repose?",
+            "question_text": "Does the slope flatten noticeably after the collapse?",
             "dimensions": [
               "object"
             ],
@@ -6843,7 +6843,7 @@
           },
           {
             "id": "03",
-            "question_text": "Is there another outside force that causes the stone's downward motion?",
+            "question_text": "Is there a visible push or pull after release besides gravity?",
             "dimensions": [
               "existence"
             ],
@@ -6966,7 +6966,7 @@
           },
           {
             "id": "03",
-            "question_text": "Does the book move downward after leaving the table?",
+            "question_text": "Does the book move upward after leaving the table?",
             "dimensions": [
               "existence"
             ],
@@ -6980,7 +6980,7 @@
           },
           {
             "id": "04",
-            "question_text": "Is there another outside force that causes the book's downward motion?",
+            "question_text": "Is there a visible push or pull continuing after the book leaves the table?",
             "dimensions": [
               "number"
             ],
@@ -7087,7 +7087,7 @@
           },
           {
             "id": "03",
-            "question_text": "Is gravity the main cause of the apple's motion?",
+            "question_text": "Is there a visible force or support continuing after detachment?",
             "dimensions": [
               "existence"
             ],
@@ -7101,7 +7101,7 @@
           },
           {
             "id": "04",
-            "question_text": "Does the apple accelerate downward while falling?",
+            "question_text": "Does the apple maintain a constant speed while falling?",
             "dimensions": [
               "number"
             ],
@@ -7208,7 +7208,7 @@
           },
           {
             "id": "03",
-            "question_text": "Is gravity driving the key's fall?",
+            "question_text": "Is there a visible push or support after release?",
             "dimensions": [
               "existence"
             ],
@@ -7222,7 +7222,7 @@
           },
           {
             "id": "04",
-            "question_text": "Does the key accelerate during the fall?",
+            "question_text": "Does the key keep a nearly constant falling speed?",
             "dimensions": [
               "number"
             ],
@@ -7331,7 +7331,7 @@
           },
           {
             "id": "03",
-            "question_text": "Is gravity the cause of the fall?",
+            "question_text": "Is there a visible push or pull acting after release?",
             "dimensions": [
               "existence"
             ],
@@ -7345,7 +7345,7 @@
           },
           {
             "id": "04",
-            "question_text": "Does the ball accelerate as it falls?",
+            "question_text": "Does the ball fall at nearly constant speed?",
             "dimensions": [
               "number"
             ],
@@ -7566,7 +7566,7 @@
           },
           {
             "id": "02",
-            "question_text": "Does the wrench move downward overall?",
+            "question_text": "Does the wrench move upward overall?",
             "dimensions": [
               "existence"
             ],
@@ -7580,7 +7580,7 @@
           },
           {
             "id": "03",
-            "question_text": "Is the downward acceleration small compared to Earth gravity?",
+            "question_text": "Does the wrench fall as fast as a typical Earth fall (rapid acceleration)?",
             "dimensions": [
               "number"
             ],
@@ -7686,7 +7686,7 @@
           },
           {
             "id": "02",
-            "question_text": "Is the fall noticeably slow due to weak gravity?",
+            "question_text": "Does the feather fall quickly like on Earth?",
             "dimensions": [
               "existence"
             ],
@@ -7700,7 +7700,7 @@
           },
           {
             "id": "03",
-            "question_text": "Does the feather accelerate slightly as it approaches the surface?",
+            "question_text": "Does the feather keep nearly constant speed as it approaches the surface?",
             "dimensions": [
               "number"
             ],
@@ -7804,7 +7804,7 @@
           },
           {
             "id": "02",
-            "question_text": "Does the apple move downward overall?",
+            "question_text": "Does the apple move upward overall?",
             "dimensions": [
               "existence"
             ],
@@ -7818,7 +7818,7 @@
           },
           {
             "id": "03",
-            "question_text": "Is the downward acceleration weaker than Earth's?",
+            "question_text": "Does the apple accelerate as strongly as Earth gravity?",
             "dimensions": [
               "number"
             ],
@@ -7924,7 +7924,7 @@
           },
           {
             "id": "02",
-            "question_text": "Does the ping pong ball move downward overall?",
+            "question_text": "Does the ping pong ball drift upward overall?",
             "dimensions": [
               "existence"
             ],
@@ -7938,7 +7938,7 @@
           },
           {
             "id": "03",
-            "question_text": "Is the motion slower than a comparable fall on Earth?",
+            "question_text": "Does it fall as fast as on Earth?",
             "dimensions": [
               "number"
             ],
@@ -7996,7 +7996,7 @@
           },
           {
             "id": "08",
-            "question_text": "Does the ping pang ball collide with the surface when it reaches it?",
+            "question_text": "Does the ping pong ball collide with the surface when it reaches it?",
             "dimensions": [
               "motion"
             ],
@@ -8076,7 +8076,7 @@
           },
           {
             "id": "04",
-            "question_text": "Is the rate of melting consistent with the temperature of the plate?",
+            "question_text": "Does the melting speed stay perfectly constant with no visible change over time?",
             "dimensions": [
               "object"
             ],
@@ -8200,7 +8200,7 @@
           },
           {
             "id": "04",
-            "question_text": "Is the wick visibly burning and reducing in length?",
+            "question_text": "Does the wick stay the same length throughout the clip?",
             "dimensions": [
               "object"
             ],
@@ -8242,7 +8242,7 @@
           },
           {
             "id": "11",
-            "question_text": "Does the wax solidify upon cooling after dripping down the candle?",
+            "question_text": "Does the dripping wax remain liquid and glossy without solidifying?",
             "dimensions": [
               "existence"
             ],
@@ -8304,7 +8304,7 @@
           },
           {
             "id": "03",
-            "question_text": "Is the pan visibly heated before the butter is placed in it?",
+            "question_text": "Are there visible heat cues like steam or shimmer from the pan before the butter touches?",
             "dimensions": [
               "shape"
             ],
@@ -8318,7 +8318,7 @@
           },
           {
             "id": "04",
-            "question_text": "Does the butter change from a solid to a liquid state?",
+            "question_text": "Does the butter stay solid the whole time?",
             "dimensions": [
               "object"
             ],
@@ -8362,7 +8362,7 @@
           },
           {
             "id": "11",
-            "question_text": "Is the pan stable and not moving during the melting process?",
+            "question_text": "Does the pan move or shake during the melting?",
             "dimensions": [
               "existence"
             ],
@@ -8442,7 +8442,7 @@
           },
           {
             "id": "04",
-            "question_text": "Is there a visible wet area forming where the snow is melting?",
+            "question_text": "Does no wet area form as the snow melts?",
             "dimensions": [
               "object"
             ],
@@ -8484,7 +8484,7 @@
           },
           {
             "id": "11",
-            "question_text": "Does the snow remain stationary while it melts?",
+            "question_text": "Does the snow shift or collapse as it melts?",
             "dimensions": [
               "existence"
             ],
@@ -8562,7 +8562,7 @@
           },
           {
             "id": "04",
-            "question_text": "Does the melting part of ice cream disappear with time?",
+            "question_text": "Does the melted ice cream simply vanish without dripping or pooling?",
             "dimensions": [
               "object"
             ],
@@ -8606,7 +8606,7 @@
           },
           {
             "id": "11",
-            "question_text": "Is the melting ice cream affected by a ball or other environmental factors?",
+            "question_text": "Is there any visible disturbance (like a hand or object touching it) that causes the melting?",
             "dimensions": [
               "existence"
             ],
@@ -8716,7 +8716,7 @@
           },
           {
             "id": "06",
-            "question_text": "Is the reflection free of any distortions or anomalies?",
+            "question_text": "Does the reflection show any warping or misalignment relative to the dancer?",
             "dimensions": [
               "object"
             ],
@@ -8810,7 +8810,7 @@
           },
           {
             "id": "04",
-            "question_text": "Is the reflection's motion consistent with the laws of optics?",
+            "question_text": "Does the reflection move in the same direction as the person's hand without lag?",
             "dimensions": [
               "size"
             ],
@@ -8842,7 +8842,7 @@
           },
           {
             "id": "06",
-            "question_text": "Is the reflection's size proportional to the actual size of the person?",
+            "question_text": "Does the reflection appear noticeably larger or smaller than the person?",
             "dimensions": [
               "object"
             ],
@@ -8964,7 +8964,7 @@
           },
           {
             "id": "06",
-            "question_text": "Is the reflection distorted in a way that matches the texture of the wet road?",
+            "question_text": "Is the reflection perfectly crisp with no distortion from ripples?",
             "dimensions": [
               "object"
             ],
@@ -9062,7 +9062,7 @@
           },
           {
             "id": "04",
-            "question_text": "Is the angle of reflection consistent with the angle of incidence of the sunlight?",
+            "question_text": "Does the bright reflection sit symmetrically relative to the sun's direction?",
             "dimensions": [
               "size"
             ],
@@ -9092,7 +9092,7 @@
           },
           {
             "id": "06",
-            "question_text": "Is the reflection of the sunlight on the lake brighter than the surrounding water?",
+            "question_text": "Is the reflection no brighter than the surrounding water?",
             "dimensions": [
               "object"
             ],
@@ -9953,7 +9953,7 @@
           },
           {
             "id": "11",
-            "question_text": "Is the shadow's edge sharp and well-defined?",
+            "question_text": "Is the shadow edge soft and blurred rather than sharp?",
             "dimensions": [
               "size",
               "object"
@@ -10077,7 +10077,7 @@
           },
           {
             "id": "11",
-            "question_text": "Is the shadow darker than the surrounding ground?",
+            "question_text": "Is the shadow about the same brightness as the surrounding ground?",
             "dimensions": [
               "size",
               "object"
@@ -10191,7 +10191,7 @@
           },
           {
             "id": "08",
-            "question_text": "Is the movement of the shadows smooth and continuous?",
+            "question_text": "Do the shadows jump abruptly rather than moving smoothly?",
             "dimensions": [
               "spatial"
             ],
@@ -10207,7 +10207,7 @@
           },
           {
             "id": "11",
-            "question_text": "Do the shadows change direction if the clouds change direction?",
+            "question_text": "Do the shadows keep the same direction even when clouds change direction?",
             "dimensions": [
               "size",
               "object"
@@ -10317,7 +10317,7 @@
           },
           {
             "id": "08",
-            "question_text": "Does the shadow's position change relative to the object's rotation angle?",
+            "question_text": "Does the shadow stay fixed in one spot while the ball rotates?",
             "dimensions": [
               "spatial"
             ],
@@ -10441,7 +10441,7 @@
           },
           {
             "id": "08",
-            "question_text": "Are the shadows stationary when the lego blocks are not moving?",
+            "question_text": "Do the shadows still move even when the blocks stay still?",
             "dimensions": [
               "spatial"
             ],
@@ -10455,7 +10455,7 @@
           },
           {
             "id": "11",
-            "question_text": "Do the shadows appear to be the same size as the lego blocks which are close to the wall?",
+            "question_text": "Are the shadows noticeably larger or smaller than the blocks even when close to the wall?",
             "dimensions": [
               "size",
               "object"
@@ -10595,7 +10595,7 @@
           },
           {
             "id": "11",
-            "question_text": "Does the smoke color from the wick bule-white?",
+            "question_text": "Is the smoke color from the wick blue-white?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -10731,7 +10731,7 @@
           },
           {
             "id": "12",
-            "question_text": "Does the smoke follow a predictable path influenced by gravity?",
+            "question_text": "Does the smoke drift upward rather than sink downward?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -11129,7 +11129,7 @@
         "questions": [
           {
             "id": "01",
-            "question_text": "Does the strawberry fall downward without any transportation or jumps?",
+            "question_text": "Does the strawberry fall downward without any teleportation or jumps?",
             "dimensions": [
               "motion"
             ],
@@ -11171,7 +11171,7 @@
           },
           {
             "id": "04",
-            "question_text": "Does the strawberry above the milk before downward?",
+            "question_text": "Is the strawberry above the milk before it falls?",
             "dimensions": [
               "spatial"
             ],
@@ -11213,7 +11213,7 @@
           },
           {
             "id": "07",
-            "question_text": "Does the strawberry submerge at least partially or totally merge after impact?",
+            "question_text": "Does the strawberry become partially or fully submerged after impact?",
             "dimensions": [
               "spatial"
             ],
@@ -11826,7 +11826,7 @@
           },
           {
             "id": "08",
-            "question_text": "Does the honey above the toast?",
+            "question_text": "Is the honey above the toast before it lands?",
             "dimensions": [
               "spatial"
             ],
