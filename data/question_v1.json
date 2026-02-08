@@ -224,7 +224,7 @@
             "id": "06",
             "question_text": "Does the sponge settle into a stable position?",
             "dimensions": [
-              "existence"
+              "motion"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -236,21 +236,21 @@
           },
           {
             "id": "07",
-            "question_text": "Does the sponge avoid moving upward without buoyant support?",
+            "question_text": "Does the sponge move upward with buoyant support?",
             "dimensions": [
               "spatial"
             ],
-            "difficulty": "easy",
+            "difficulty": "hard",
             "frame_indices": [
               10,
               30,
               50
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "08",
-            "question_text": "Does the sponge avoid sinking during the clip?",
+            "question_text": "Does the sponge sink during the clip?",
             "dimensions": [
               "material",
               "spatial"
@@ -263,7 +263,7 @@
               40,
               50
             ],
-            "answer": 1
+            "answer": 0
           }
         ]
       },
