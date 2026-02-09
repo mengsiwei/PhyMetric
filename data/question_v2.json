@@ -137,7 +137,7 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           }
         ]
       },
@@ -349,7 +349,7 @@
               28,
               32
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "07",
@@ -435,7 +435,7 @@
           },
           {
             "id": "04",
-            "question_text": "Does the waterline form around the toy?",
+            "question_text": "Does the ripples form around the toy?",
             "dimensions": [
               "motion"
             ],
@@ -473,7 +473,7 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "07",
@@ -501,7 +501,7 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           }
         ]
       },
@@ -539,7 +539,7 @@
           },
           {
             "id": "03",
-            "question_text": "Is the cap partially above the water surface?",
+            "question_text": "Is the bottle partially above the water surface?",
             "dimensions": [
               "spatial"
             ],
@@ -591,7 +591,7 @@
               28,
               32
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "07",
@@ -813,9 +813,9 @@
           },
           {
             "id": "05",
-            "question_text": "Does the rock's speed appear reduced by water resistance?",
+            "question_text": "Do bubbles appear after the rock enters the water?",
             "dimensions": [
-              "motion"
+              "existence"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -933,9 +933,9 @@
           },
           {
             "id": "05",
-            "question_text": "Does the spoon's speed appear slowed by the water?",
+            "question_text": "Do bubbles appear after the spoon enters the water?",
             "dimensions": [
-              "motion"
+              "existence"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -1055,7 +1055,7 @@
           },
           {
             "id": "05",
-            "question_text": "Does the anchor slow due to water resistance compared to air?",
+            "question_text": "Do bubbles appear after the anchor enters the water?",
             "dimensions": [
               "motion"
             ],
@@ -1083,15 +1083,15 @@
           },
           {
             "id": "07",
-            "question_text": "Does the anchor settle after contacting the bottom?",
+            "question_text": "Does the anchor settle when contacting the bottom?",
             "dimensions": [
               "motion"
             ],
             "difficulty": "easy",
             "frame_indices": [
-              50,
-              55,
-              59
+              40,
+              45,
+              50
             ],
             "answer": 1
           },
@@ -1175,7 +1175,7 @@
           },
           {
             "id": "05",
-            "question_text": "Does the cup's descent appear slowed by water resistance?",
+            "question_text": "Do bubbles appear after the cup enters the water?",
             "dimensions": [
               "existence"
             ],
@@ -1261,9 +1261,9 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              50,
-              55,
-              59
+              10,
+              30,
+              50
             ],
             "answer": 1
           },
@@ -1317,7 +1317,7 @@
             "id": "06",
             "question_text": "Does the color of the flag remain the same?",
             "dimensions": [
-              "appearance/texture"
+              "color"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -1399,7 +1399,7 @@
             "id": "03",
             "question_text": "Does the curtain exhibit realistic folds and creases as it flutters?",
             "dimensions": [
-              "motion"
+              "existence"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -1483,7 +1483,7 @@
               40,
               50
             ],
-            "answer": 0
+            "answer": 1
           }
         ]
       },
@@ -1547,7 +1547,7 @@
               28,
               32
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "05",
@@ -1665,11 +1665,12 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              30,
+              40,
+              50,
+              59
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "05",
@@ -1703,7 +1704,7 @@
           },
           {
             "id": "07",
-            "question_text": "Does the scarf any sudden or unrealistic jumps in position?",
+            "question_text": "Does the scarf have any sudden or unrealistic jumps in position?",
             "dimensions": [
               "spatial"
             ],
@@ -1713,7 +1714,7 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "08",
@@ -1744,8 +1745,8 @@
             "difficulty": "easy",
             "frame_indices": [
               0,
-              2,
-              4
+              4,
+              8
             ],
             "answer": 1
           },
@@ -2079,7 +2080,7 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "08",
@@ -2117,7 +2118,7 @@
           },
           {
             "id": "02",
-            "question_text": "Does a collision occur between the ball and the racket ?",
+            "question_text": "Does a collision occur between the ball and the racket?",
             "dimensions": [
               "interaction"
             ],
@@ -2197,7 +2198,7 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "08",
@@ -2228,8 +2229,8 @@
             "difficulty": "easy",
             "frame_indices": [
               0,
-              2,
-              4
+              4,
+              8
             ],
             "answer": 1
           },
@@ -2307,21 +2308,21 @@
           },
           {
             "id": "07",
-            "question_text": "Is any deformation temporary?",
+            "question_text": "Is there any change of the basketball's texture during the clip?",
             "dimensions": [
-              "motion"
+              "appearance/texture"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "08",
-            "question_text": "Does the ball leave the wall with visible speed?",
+            "question_text": "Does the basketball leave the floor with visible speed?",
             "dimensions": [
               "motion"
             ],
@@ -2347,9 +2348,9 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              10,
+              20,
+              30
             ],
             "answer": 1
           },
@@ -2375,9 +2376,9 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              24,
-              28,
-              32
+              30,
+              32,
+              34
             ],
             "answer": 1
           },
@@ -2431,9 +2432,10 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
               30,
-              50
+              40,
+              50,
+              59
             ],
             "answer": 1
           },
