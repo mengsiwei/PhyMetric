@@ -2462,9 +2462,10 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              1,
+              10,
+              20,
+              30
             ],
             "answer": 1
           },
@@ -2522,7 +2523,7 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "06",
@@ -2582,9 +2583,10 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              1,
+              10,
+              20,
+              30
             ],
             "answer": 1
           },
@@ -2628,7 +2630,7 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "05",
@@ -2662,15 +2664,15 @@
           },
           {
             "id": "07",
-            "question_text": "Is the motion continuous leading up to impact?",
+            "question_text": "Is this dough always a lump",
             "dimensions": [
-              "interaction"
+              "number"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              10,
+              30,
+              50
             ],
             "answer": 1
           },
@@ -2702,9 +2704,10 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              1,
+              10,
+              20,
+              30
             ],
             "answer": 1
           },
@@ -2762,7 +2765,7 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "06",
@@ -2782,7 +2785,7 @@
           },
           {
             "id": "07",
-            "question_text": "Is motion continuous prior to impact?",
+            "question_text": "Does the mud flatten upon impact with the wall?",
             "dimensions": [
               "interaction"
             ],
@@ -2978,17 +2981,17 @@
           },
           {
             "id": "04",
-            "question_text": "Does the mallet stop or slow sharply upon impact without bouncing back?",
+            "question_text": "Does the rice cake stop or slow sharply upon impact without bouncing back?",
             "dimensions": [
               "interaction"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              50,
-              55,
-              59
+              30,
+              40,
+              50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "05",
@@ -3016,13 +3019,13 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "07",
             "question_text": "Is the motion continuous leading up to the strike?",
             "dimensions": [
-              "interaction"
+              "motion"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -3044,7 +3047,7 @@
               28,
               32
             ],
-            "answer": 1
+            "answer": 0
           }
         ]
       }
@@ -3100,9 +3103,9 @@
             "id": "04",
             "question_text": "Is there any new elastic ball appearing during squeezing?",
             "dimensions": [
-              "material"
+              "number"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               20,
@@ -3208,14 +3211,16 @@
           },
           {
             "id": "03",
-            "question_text": "Is there a noticeable delay between releasing the rubber band and it snapping back?",
+            "question_text": "Does the rubber band snap back when releasing it?",
             "dimensions": [
               "material"
             ],
             "difficulty": "hard",
             "frame_indices": [
               10,
+              20,
               30,
+              40,
               50
             ],
             "answer": 1
@@ -3248,13 +3253,13 @@
               30,
               50
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "06",
-            "question_text": "Is the speed of the rubber band snapping back consistent with the amount of stretch applied?",
+            "question_text": "Is the number the band always one?",
             "dimensions": [
-              "motion"
+              "number"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -3288,9 +3293,9 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
-              2,
-              4
+              1,
+              20,
+              30
             ],
             "answer": 1
           }
@@ -3364,11 +3369,10 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
-              20,
-              30,
-              40,
-              50
+              45,
+              50,
+              55,
+              59
             ],
             "answer": 0
           },
@@ -3400,7 +3404,7 @@
               28,
               32
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "08",
@@ -3408,7 +3412,7 @@
             "dimensions": [
               "interaction"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
@@ -3554,9 +3558,11 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              50,
-              55,
-              59
+              10,
+              20,
+              30,
+              40,
+              50
             ],
             "answer": 1
           },
@@ -3629,7 +3635,9 @@
             "difficulty": "hard",
             "frame_indices": [
               10,
+              20,
               30,
+              40,
               50
             ],
             "answer": 1
@@ -3718,7 +3726,7 @@
             "id": "04",
             "question_text": "Do the pieces of the balloon scatter outward after it bursts?",
             "dimensions": [
-              "number"
+              "direction"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -3732,7 +3740,7 @@
             "id": "05",
             "question_text": "Are there pieces of balloon emerging?",
             "dimensions": [
-              "number"
+              "existence"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -3746,7 +3754,7 @@
             "id": "06",
             "question_text": "Are the colors of the fragments consistent with the original balloon?",
             "dimensions": [
-              "number"
+              "color"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -3766,9 +3774,9 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
-              2,
-              4
+              24,
+              28,
+              32
             ],
             "answer": 1
           },
@@ -3878,7 +3886,7 @@
           },
           {
             "id": "07",
-            "question_text": "Does the drum melting like liquid (it should tear/shred)?",
+            "question_text": "Does the drum tear or shred?",
             "dimensions": [
               "material"
             ],
@@ -3902,7 +3910,7 @@
               30,
               50
             ],
-            "answer": 0
+            "answer": 1
           }
         ]
       },
@@ -4008,7 +4016,7 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "08",
@@ -4097,8 +4105,8 @@
             "difficulty": "hard",
             "frame_indices": [
               0,
-              2,
-              4
+              10,
+              20
             ],
             "answer": 1
           },
@@ -4231,8 +4239,9 @@
             "difficulty": "hard",
             "frame_indices": [
               0,
-              2,
-              4
+              10,
+              20,
+              30
             ],
             "answer": 1
           },
@@ -4254,17 +4263,19 @@
           },
           {
             "id": "08",
-            "question_text": "Is there any visible distortion in the water around the big bubble before it bursts?",
+            "question_text": "Is there any visible distortion in the water around the big bubble when it bursting?",
             "dimensions": [
               "appearance/texture"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
-              2,
-              4
+              10,
+              20,
+              30,
+              40,
+              50
             ],
-            "answer": 0
+            "answer": 1
           }
         ]
       }
