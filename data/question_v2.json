@@ -1737,7 +1737,7 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              0,
+              1,
               4,
               8
             ],
@@ -2221,7 +2221,7 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              0,
+              1,
               4,
               8
             ],
@@ -2814,114 +2814,86 @@
         ]
       },
       "inelastic_scene_04": {
-        "scene_name": "Sticky clay spreading on a bottle",
-        "scene_caption": "A sticky clay mass hits a bottle, spreads out from the impact point, and stays in place afterward.",
+        "scene_name": "Ripe tomato splatting on floor",
+        "scene_caption": "A red ripe tomato falls vertically from a height onto a hard floor. Upon impact, it deforms heavily and splatters without bouncing back up.",
         "questions": [
           {
             "id": "01",
-            "question_text": "Does the clay move toward the bottle before contact?",
+            "question_text": "Is a tomato visible in the scene?",
             "dimensions": [
-              "interaction"
+              "existence"
             ],
             "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              10,
+              30,
+              50
             ],
             "answer": 1
           },
           {
             "id": "02",
-            "question_text": "Does the clay collide with the bottle?",
+            "question_text": "Does the tomato move downward before hitting the floor?",
             "dimensions": [
-              "interaction"
+              "direction"
             ],
             "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              10,
+              20,
+              30
             ],
             "answer": 1
           },
           {
             "id": "03",
-            "question_text": "Does the clay spread outward from the impact point?",
+            "question_text": "Does the tomato make contact with the floor?",
             "dimensions": [
               "interaction"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              30,
+              35,
+              40,
+              45,
+              50
             ],
             "answer": 1
           },
           {
             "id": "04",
-            "question_text": "Does the clay remain on the bottle after impact?",
+            "question_text": "Does the tomato bounce back up into the air like a rubber ball?",
             "dimensions": [
-              "interaction"
+              "motion"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              24,
-              28,
-              32
+              40,
+              50,
+              59
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "05",
-            "question_text": "Is there no rebound motion away from the bottle?",
+            "question_text": "Does the tomato flatten or deform significantly upon impact?",
             "dimensions": [
-              "interaction"
+              "shape"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
-              30,
+              40,
+              45,
               50
             ],
             "answer": 1
           },
           {
             "id": "06",
-            "question_text": "Is motion continuous up to the collision moment?",
+            "question_text": "Does the tomato stay on the floor after the impact?",
             "dimensions": [
-              "interaction"
-            ],
-            "difficulty": "hard",
-            "frame_indices": [
-              24,
-              28,
-              32
-            ],
-            "answer": 1
-          },
-          {
-            "id": "07",
-            "question_text": "Does the bottle remain stationary?",
-            "dimensions": [
-              "spatial"
-            ],
-            "difficulty": "easy",
-            "frame_indices": [
-              10,
-              20,
-              30,
-              40,
-              50
-            ],
-            "answer": 1
-          },
-          {
-            "id": "08",
-            "question_text": "Is the final shape different from the initial shape?",
-            "dimensions": [
-              "shape"
+              "motion"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -2930,6 +2902,34 @@
               59
             ],
             "answer": 1
+          },
+          {
+            "id": "07",
+            "question_text": "Does the tomato turn into a liquid puddle immediately (melting)?",
+            "dimensions": [
+              "material"
+            ],
+            "difficulty": "hard",
+            "frame_indices": [
+              40,
+              50,
+              59
+            ],
+            "answer": 0
+          },
+          {
+            "id": "08",
+            "question_text": "Does the tomato turn into a liquid puddle immediately (melting)?",
+            "dimensions": [
+              "material"
+            ],
+            "difficulty": "hard",
+            "frame_indices": [
+              40,
+              50,
+              59
+            ],
+            "answer": 0
           }
         ]
       },
@@ -3257,11 +3257,11 @@
           },
           {
             "id": "06",
-            "question_text": "Is the number the band always one?",
+            "question_text": "Does the rubber band break into two or more pieces?",
             "dimensions": [
               "number"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               20,
@@ -3269,19 +3269,19 @@
               40,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "07",
-            "question_text": "Does the rubber band remain stretched after snapping back?",
+            "question_text": "Does the rubber band become thinner as it is stretched?",
             "dimensions": [
-              "material"
+              "shape"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
+              20,
               30,
-              50
+              40
             ],
             "answer": 1
           },
@@ -3307,7 +3307,7 @@
         "questions": [
           {
             "id": "01",
-            "question_text": "Does the hand visibly press down on the sponge?",
+            "question_text": "Does the hand make physical contact or press down on the sponge?",
             "dimensions": [
               "motion"
             ],
@@ -3349,46 +3349,44 @@
           },
           {
             "id": "04",
-            "question_text": "Is there a noticeable delay between the release of the hand and the sponge's rebound?",
+            "question_text": "Does the sponge remain permanently dented after the hand leaves (like clay)?",
             "dimensions": [
-              "interaction"
+              "material"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
-              30,
-              50
+              35,
+              45,
+              55
             ],
             "answer": 0
           },
           {
             "id": "05",
-            "question_text": "Does the sponge keep moving slightly after fully rebounding?",
+            "question_text": "Does the sponge crumble into multiple pieces under pressure?",
             "dimensions": [
-              "motion"
+              "number"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              45,
-              50,
-              55,
-              59
+              20,
+              30,
+              40,
+              50
             ],
             "answer": 0
           },
           {
             "id": "06",
-            "question_text": "Is the motion of the hand consistent with the expected force needed to compress the sponge?",
+            "question_text": "Does the hand move upward/away to release the sponge?",
             "dimensions": [
               "motion"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              10,
-              20,
-              30,
               40,
-              50
+              50,
+              59
             ],
             "answer": 1
           },
@@ -3644,9 +3642,9 @@
           },
           {
             "id": "07",
-            "question_text": "Is the spring hanging or sagging downward while it oscillates?",
+            "question_text": "Does the spring snap or break into separate pieces during the stretch?",
             "dimensions": [
-              "direction"
+              "number"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -3656,19 +3654,19 @@
               40,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "08",
-            "question_text": "After release, are the hands no longer pulling the spring?",
+            "question_text": "Does the spring maintain a metallic texture/appearance throughout?",
             "dimensions": [
-              "motion"
+              "appearance/texture"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
-              2,
-              4
+              10,
+              30,
+              50
             ],
             "answer": 1
           }
@@ -3696,15 +3694,15 @@
           },
           {
             "id": "02",
-            "question_text": "Is the balloon made of a material that stretches before bursting?",
+            "question_text": "Is only one balloon (not many balloon) visible in the scene?",
             "dimensions": [
               "material"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
-              2,
-              4
+              1,
+              5,
+              10
             ],
             "answer": 1
           },
@@ -3808,7 +3806,7 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -4046,7 +4044,7 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -4104,7 +4102,7 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
+              1,
               10,
               20
             ],
@@ -4166,7 +4164,7 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -4238,7 +4236,7 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
+              1,
               10,
               20,
               30
@@ -4395,7 +4393,7 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -4607,7 +4605,7 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -4897,7 +4895,7 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -6495,7 +6493,7 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -6601,7 +6599,7 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -6727,7 +6725,7 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -6849,7 +6847,7 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -6969,7 +6967,7 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -7089,7 +7087,7 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -7211,7 +7209,7 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -8163,7 +8161,7 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -8211,7 +8209,7 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -8363,7 +8361,7 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -10605,7 +10603,7 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -10885,7 +10883,7 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -10989,7 +10987,7 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -11053,7 +11051,7 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
@@ -12023,7 +12021,7 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              0,
+              1,
               2,
               4
             ],
