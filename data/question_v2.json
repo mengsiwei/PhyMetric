@@ -1381,11 +1381,11 @@
           },
           {
             "id": "02",
-            "question_text": "Does the curtain move in a manner consistent with the direction of the breeze?",
+            "question_text": "Is there a curtain visible in the scene?",
             "dimensions": [
-              "direction"
+              "existence"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               20,
@@ -1397,9 +1397,9 @@
           },
           {
             "id": "03",
-            "question_text": "Does the curtain exhibit realistic folds and creases as it flutters?",
+            "question_text": "Does the curtain fabric change shape with folds and ripples as it moves?",
             "dimensions": [
-              "existence"
+              "shape"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -1411,79 +1411,73 @@
           },
           {
             "id": "04",
-            "question_text": "Does the curtain return to a resting position when the breeze subsides?",
+            "question_text": "Does the curtain move away from the window opening",
             "dimensions": [
-              "spatial"
-            ],
-            "difficulty": "easy",
-            "frame_indices": [
-              50,
-              55,
-              59
-            ],
-            "answer": 0
-          },
-          {
-            "id": "05",
-            "question_text": "Is the motion of the curtain smooth and continuous?",
-            "dimensions": [
-              "motion"
+              "direction"
             ],
             "difficulty": "hard",
             "frame_indices": [
               10,
-              20,
               30,
-              40,
+              50
+            ],
+            "answer": 1
+          },
+          {
+            "id": "05",
+            "question_text": "Does the curtain maintain a consistent fabric texture throughout the motion?",
+            "dimensions": [
+              "appearance/texture"
+            ],
+            "difficulty": "hard",
+            "frame_indices": [
+              10,
+              30,
               50
             ],
             "answer": 1
           },
           {
             "id": "06",
-            "question_text": "Does the curtain sag downward between gusts?",
+            "question_text": "Does the curtain behave like a rigid board without bending?",
             "dimensions": [
-              "direction"
+              "material"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "07",
-            "question_text": "Does the curtain's fabric behave consistently with its material properties?",
+            "question_text": "Does the top of the curtain remain spatially fixed (attached) while the bottom moves?",
             "dimensions": [
-              "material"
+              "spatial"
             ],
             "difficulty": "hard",
             "frame_indices": [
               10,
-              20,
               30,
-              40,
               50
             ],
             "answer": 1
           },
           {
             "id": "08",
-            "question_text": "Does the curtain slow and lag slightly as it changes direction, rather than snapping instantly?",
+            "question_text": "Does the curtain remain completely static after the window is opened?",
             "dimensions": [
-              "direction"
+              "motion"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
-              20,
               30,
-              40,
               50
             ],
-            "answer": 1
+            "answer": 0
           }
         ]
       },
@@ -1509,9 +1503,9 @@
           },
           {
             "id": "02",
-            "question_text": "Do the ripples on the tablecloth propagate in the direction opposite to the pull?",
+            "question_text": "Do ripples or folds form on the fabric surface when it is pulled?",
             "dimensions": [
-              "direction"
+              "shape"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -1523,7 +1517,7 @@
           },
           {
             "id": "03",
-            "question_text": "Do the ripples decrease in amplitude as they move away from the point of pulling?",
+            "question_text": "Do the ripples travel away from the edge that is being pulled?",
             "dimensions": [
               "direction"
             ],
@@ -1551,53 +1545,9 @@
           },
           {
             "id": "05",
-            "question_text": "Is the motion of the tablecloth consistent with the force applied at the edge?",
+            "question_text": "Does the tablecloth behave like a rigid board (sliding without wrinkling)?",
             "dimensions": [
-              "motion"
-            ],
-            "difficulty": "hard",
-            "frame_indices": [
-              10,
-              20,
-              30,
-              40,
-              50
-            ],
-            "answer": 1
-          },
-          {
-            "id": "06",
-            "question_text": "Do the ripples appear to be evenly spaced as they travel across the tablecloth?",
-            "dimensions": [
-              "existence"
-            ],
-            "difficulty": "hard",
-            "frame_indices": [
-              10,
-              30,
-              50
-            ],
-            "answer": 1
-          },
-          {
-            "id": "07",
-            "question_text": "Does the tablecloth eventually come to a rest after the ripples dissipate?",
-            "dimensions": [
-              "spatial"
-            ],
-            "difficulty": "hard",
-            "frame_indices": [
-              50,
-              55,
-              59
-            ],
-            "answer": 1
-          },
-          {
-            "id": "08",
-            "question_text": "Do the ripples speed up as they travel across the tablecloth?",
-            "dimensions": [
-              "motion"
+              "material"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -1606,6 +1556,49 @@
               50
             ],
             "answer": 0
+          },
+          {
+            "id": "06",
+            "question_text": "Does the motion of the ripples eventually decrease or settle?",
+            "dimensions": [
+              "motion"
+            ],
+            "difficulty": "hard",
+            "frame_indices": [
+              30,
+              40,
+              50,
+              59
+            ],
+            "answer": 1
+          },
+          {
+            "id": "07",
+            "question_text": "Does the tablecloth split into multiple separate pieces during the pull?",
+            "dimensions": [
+              "number"
+            ],
+            "difficulty": "easy",
+            "frame_indices": [
+              10,
+              30,
+              50
+            ],
+            "answer": 1
+          },
+          {
+            "id": "08",
+            "question_text": "Does the pulled edge change its spatial position relative to the table?",
+            "dimensions": [
+              "spatial"
+            ],
+            "difficulty": "hard",
+            "frame_indices": [
+              10,
+              30,
+              50
+            ],
+            "answer": 1
           }
         ]
       },
