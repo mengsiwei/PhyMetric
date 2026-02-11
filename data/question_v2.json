@@ -7652,15 +7652,15 @@
           },
           {
             "id": "04",
-            "question_text": "Is air resistance effectively absent?",
+            "question_text": "Does the feather stop moving when colliding with the surface?",
             "dimensions": [
               "motion"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
-              30,
-              50
+              45,
+              50,
+              55
             ],
             "answer": 1
           },
@@ -7876,9 +7876,9 @@
           },
           {
             "id": "03",
-            "question_text": "Does it fall as fast as on Earth?",
+            "question_text": "Does the apple bounce back a little height after impact?",
             "dimensions": [
-              "direction"
+              "motion"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -7886,11 +7886,11 @@
               30,
               50
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "04",
-            "question_text": "Is air resistance minimal or absent?",
+            "question_text": "Is the ping pang ball's motion continuous without sudden jumps?",
             "dimensions": [
               "motion"
             ],
