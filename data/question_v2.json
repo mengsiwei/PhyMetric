@@ -4291,9 +4291,9 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              24,
-              28,
-              32
+              10,
+              20,
+              30
             ],
             "answer": 1
           },
@@ -4319,9 +4319,11 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
-              30,
-              50
+              24,
+              28,
+              32,
+              36,
+              40
             ],
             "answer": 1
           },
@@ -4393,9 +4395,9 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              1,
-              2,
-              4
+              10,
+              20,
+              30
             ],
             "answer": 1
           }
@@ -4421,15 +4423,15 @@
           },
           {
             "id": "02",
-            "question_text": "Does the plate accelerate as it falls as it falls?",
+            "question_text": "Is a plate visible in the scene?",
             "dimensions": [
-              "motion"
+              "existence"
             ],
             "difficulty": "hard",
             "frame_indices": [
               10,
-              30,
-              50
+              15,
+              20
             ],
             "answer": 1
           },
@@ -4449,33 +4451,32 @@
           },
           {
             "id": "04",
-            "question_text": "Do the pieces remain clustered near the impact point rather than scattering far?",
+            "question_text": "Does the plate break into multiple separate pieces upon impact?",
             "dimensions": [
-              "interaction"
+              "number"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              30,
+              35,
+              40,
+              45
             ],
             "answer": 0
           },
           {
             "id": "05",
-            "question_text": "Is the breaking of the plate consistent with the material properties of ceramics?",
+            "question_text": "Does the plate bounce back up whole like a rubber object?",
             "dimensions": [
-              "material"
+              "motion"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
-              20,
               30,
               40,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "06",
@@ -4513,8 +4514,9 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              10,
-              30,
+              35,
+              40,
+              45,
               50
             ],
             "answer": 1
@@ -4543,17 +4545,17 @@
           },
           {
             "id": "02",
-            "question_text": "Does the bottle accelerate as it falls as it falls?",
+            "question_text": "Does the bottle disappear (vanish) immediately upon hitting the ground?",
             "dimensions": [
-              "motion"
+              "existence"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              10,
               30,
+              40,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "03",
@@ -4599,17 +4601,17 @@
           },
           {
             "id": "06",
-            "question_text": "Is the motion of the bottle consistent with the initial force that knocked it off the table?",
+            "question_text": "Does the whole bottle bounce back up intact like a rubber object?",
             "dimensions": [
-              "motion"
+              "material"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              1,
-              2,
-              4
+              40,
+              50,
+              59
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "07",
@@ -4619,9 +4621,9 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              5,
+              15,
+              20
             ],
             "answer": 1
           },
@@ -4633,9 +4635,10 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
               30,
-              50
+              40,
+              50,
+              59
             ],
             "answer": 1
           }
@@ -4653,9 +4656,11 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              24,
-              28,
-              32
+              10,
+              15,
+              20,
+              25,
+              30
             ],
             "answer": 1
           },
@@ -4689,7 +4694,7 @@
           },
           {
             "id": "04",
-            "question_text": "Do cracks appear away from the impact point rather than radiating from it?",
+            "question_text": "Do the cracks radiate outward from the point where the rock hit?",
             "dimensions": [
               "interaction"
             ],
@@ -4697,9 +4702,11 @@
             "frame_indices": [
               24,
               28,
-              32
+              32,
+              36,
+              40
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "05",
@@ -4717,19 +4724,17 @@
           },
           {
             "id": "06",
-            "question_text": "Is the speed of the rock consistent with causing a crack in the mirror?",
+            "question_text": "Does the rock pass through the mirror after contacting?",
             "dimensions": [
-              "motion"
+              "interaction"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              10,
-              20,
               30,
               40,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "07",
@@ -4747,17 +4752,17 @@
           },
           {
             "id": "08",
-            "question_text": "Does the crack spread outwards from the initial point of impact?",
+            "question_text": "Does the mirror surface remain completely smooth and unbroken?",
             "dimensions": [
-              "interaction"
+              "appearance/texture"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              40,
+              50,
+              59
             ],
-            "answer": 1
+            "answer": 0
           }
         ]
       },
@@ -4809,15 +4814,15 @@
           },
           {
             "id": "04",
-            "question_text": "Is there a noticeable delay before the vase shatters after impact?",
+            "question_text": "Does the stone pass through the vase without affecting it (ghosting)?",
             "dimensions": [
               "interaction"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              30,
+              40,
+              50
             ],
             "answer": 0
           },
@@ -4896,8 +4901,8 @@
             "difficulty": "easy",
             "frame_indices": [
               1,
-              2,
-              4
+              4,
+              8
             ],
             "answer": 1
           },
@@ -5039,7 +5044,7 @@
           },
           {
             "id": "03",
-            "question_text": "Does the book remain on the wooden tabletop without lifting off?",
+            "question_text": "Does the book bounce or float up into the air?",
             "dimensions": [
               "motion"
             ],
@@ -5051,21 +5056,23 @@
               40,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "04",
-            "question_text": "Does the book visibly slow down as it slides?",
+            "question_text": "Does the book sink into or pass through the table surface?",
             "dimensions": [
-              "motion"
+              "spatial"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
+              20,
               30,
+              40,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "05",
@@ -5079,21 +5086,21 @@
               55,
               59
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "06",
-            "question_text": "Does the book speed up without additional force?",
+            "question_text": "Does the book maintain its rigid rectangular shape?",
             "dimensions": [
-              "motion"
+              "shape"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
               50
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "07",
@@ -5128,14 +5135,14 @@
         ]
       },
       "high_friction_scene_03": {
-        "scene_name": "A rubber eraser barely sliding on a desk",
-        "scene_caption": "A rubber eraser is released on a desk and barely slides before strong friction stops it.",
+        "scene_name": "Box sliding on thick grass",
+        "scene_caption": "A cardboard box is pushed forcefully across a patch of thick green grass. It slides with high resistance and stops immediately as the grass blades create friction.",
         "questions": [
           {
             "id": "01",
-            "question_text": "Does the eraser move slightly after release?",
+            "question_text": "Is a cardboard box visible on the grass?",
             "dimensions": [
-              "motion"
+              "existence"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -5147,7 +5154,37 @@
           },
           {
             "id": "02",
-            "question_text": "Is the motion continuous without teleportation?",
+            "question_text": "Does the box move across the grass initially?",
+            "dimensions": [
+              "motion"
+            ],
+            "difficulty": "easy",
+            "frame_indices": [
+              10,
+              20,
+              30
+            ],
+            "answer": 1
+          },
+          {
+            "id": "03",
+            "question_text": "Does the box stop moving almost instantly after the push?",
+            "dimensions": [
+              "motion"
+            ],
+            "difficulty": "easy",
+            "frame_indices": [
+              35,
+              40,
+              45,
+              50,
+              55
+            ],
+            "answer": 1
+          },
+          {
+            "id": "04",
+            "question_text": "Does the box glide smoothly for a long distance (like on ice)?",
             "dimensions": [
               "motion"
             ],
@@ -5159,41 +5196,13 @@
               40,
               50
             ],
-            "answer": 1
-          },
-          {
-            "id": "03",
-            "question_text": "Does the eraser stay in contact with the desk?",
-            "dimensions": [
-              "interaction"
-            ],
-            "difficulty": "easy",
-            "frame_indices": [
-              24,
-              28,
-              32
-            ],
-            "answer": 1
-          },
-          {
-            "id": "04",
-            "question_text": "Does the eraser come to rest after moving only a short distance?",
-            "dimensions": [
-              "spatial"
-            ],
-            "difficulty": "hard",
-            "frame_indices": [
-              10,
-              30,
-              50
-            ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "05",
-            "question_text": "Does the eraser slide a long distance before stopping?",
+            "question_text": "Does the box bounce or float above the grass tips?",
             "dimensions": [
-              "motion"
+              "spatial"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -5205,23 +5214,23 @@
           },
           {
             "id": "06",
-            "question_text": "Does the eraser accelerate without an added push?",
+            "question_text": "Does the box stay in contact with the ground throughout the slide?",
             "dimensions": [
-              "motion"
+              "interaction"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
               50
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "07",
-            "question_text": "Does the eraser remain stable without tipping?",
+            "question_text": "Does the box maintain its cubic shape without deformation?",
             "dimensions": [
-              "motion"
+              "shape"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -5235,7 +5244,7 @@
           },
           {
             "id": "08",
-            "question_text": "Is the final state the eraser at rest?",
+            "question_text": "Is the final state the box at rest?",
             "dimensions": [
               "spatial"
             ],
@@ -5299,14 +5308,16 @@
           },
           {
             "id": "04",
-            "question_text": "Does the box stop after a short slide?",
+            "question_text": "Does the box maintain its cubic shape without deformation?",
             "dimensions": [
-              "motion"
+              "shape"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
+              20,
               30,
+              40,
               50
             ],
             "answer": 1
@@ -5323,7 +5334,7 @@
               55,
               59
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "06",
@@ -5337,7 +5348,7 @@
               30,
               50
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "07",
@@ -5372,28 +5383,57 @@
         ]
       },
       "high_friction_scene_05": {
-        "scene_name": "A backpack hardly moving on a carpet",
-        "scene_caption": "A backpack is released on a carpet, moves only slightly, and quickly stops due to strong friction.",
+        "scene_name": "Eraser erasing text",
+        "scene_caption": "A hand holds a white rubber eraser and rubs it vigorously back and forth over handwritten text on a piece of paper. The friction causes the text to fade and disappear, leaving small rubber crumbs.",
         "questions": [
           {
             "id": "01",
-            "question_text": "Does the backpack move at least slightly after release?",
+            "question_text": "Is a white eraser visible in the hand?",
             "dimensions": [
-              "motion"
+              "existence"
             ],
             "difficulty": "easy",
             "frame_indices": [
-              6,
               10,
-              14
+              20,
+              30
             ],
             "answer": 1
           },
           {
             "id": "02",
-            "question_text": "Is the motion continuous without teleporting?",
+            "question_text": "Does the eraser make continuous contact with the paper surface?",
             "dimensions": [
-              "motion"
+              "interaction"
+            ],
+            "difficulty": "easy",
+            "frame_indices": [
+              20,
+              30,
+              40
+            ],
+            "answer": 1
+          },
+          {
+            "id": "03",
+            "question_text": "Does the eraser move in a back-and-forth (rubbing) motion?",
+            "dimensions": [
+              "motion",
+              "direction"
+            ],
+            "difficulty": "easy",
+            "frame_indices": [
+              20,
+              30,
+              40
+            ],
+            "answer": 1
+          },
+          {
+            "id": "04",
+            "question_text": "Does the handwritten text fade or disappear where the eraser rubs?",
+            "dimensions": [
+              "appearance/texture"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -5401,93 +5441,69 @@
               20,
               30,
               40,
-              50
-            ],
-            "answer": 1
-          },
-          {
-            "id": "03",
-            "question_text": "Does the backpack remain in contact with the surface?",
-            "dimensions": [
-              "interaction"
-            ],
-            "difficulty": "easy",
-            "frame_indices": [
-              24,
-              28,
-              32
-            ],
-            "answer": 1
-          },
-          {
-            "id": "04",
-            "question_text": "Does the backpack stop quickly after a small movement?",
-            "dimensions": [
-              "motion"
-            ],
-            "difficulty": "hard",
-            "frame_indices": [
-              10,
-              30,
-              50
+              50,
+              59
             ],
             "answer": 1
           },
           {
             "id": "05",
-            "question_text": "Does the backpack slide a long distance before stopping?",
+            "question_text": "Do small crumbs or debris appear during the erasing process?",
             "dimensions": [
-              "motion"
-            ],
-            "difficulty": "easy",
-            "frame_indices": [
-              10,
-              30,
-              50
-            ],
-            "answer": 0
-          },
-          {
-            "id": "06",
-            "question_text": "Does the backpack speed up without a force?",
-            "dimensions": [
-              "motion"
+              "number"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
+              40,
+              50,
+              59
+            ],
+            "answer": 1
+          },
+          {
+            "id": "06",
+            "question_text": "Does the paper tear or turn into liquid immediately?",
+            "dimensions": [
+              "shape"
+            ],
+            "difficulty": "hard",
+            "frame_indices": [
+              20,
               30,
-              50
+              40,
+              50,
+              59
             ],
             "answer": 0
           },
           {
             "id": "07",
-            "question_text": "Does the backpack stay stable without tipping?",
+            "question_text": "Does the eraser pass through the paper (ghosting/clipping)?",
             "dimensions": [
-              "motion"
+              "spatial",
+              "interaction"
             ],
             "difficulty": "easy",
             "frame_indices": [
-              10,
+              20,
               30,
-              50
+              40
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "08",
-            "question_text": "Is the final state of the backpack at rest?",
+            "question_text": "Does the text remain perfectly black and unchanged despite rubbing?",
             "dimensions": [
-              "spatial"
+              "appearance/texture"
             ],
-            "difficulty": "easy",
+            "difficulty": "hard",
             "frame_indices": [
+              40,
               50,
-              55,
-              59
+              60
             ],
-            "answer": 1
+            "answer": 0
           }
         ]
       }
@@ -5513,11 +5529,11 @@
           },
           {
             "id": "02",
-            "question_text": "Is the stone's motion continuous without teleportation or jumping?",
+            "question_text": "Is a stone visible during the clip?",
             "dimensions": [
-              "motion"
+              "existence"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               20,
@@ -5618,30 +5634,47 @@
         ]
       },
       "low_friction_scene_02": {
-        "scene_name": "A hockey puck sliding on ice",
-        "scene_caption": "A hockey puck is released on ice and glides forward smoothly, slowing slightly due to low friction.",
+        "scene_name": "Child sliding down a slide",
+        "scene_caption": "A child sits at the top of a smooth plastic playground slide and pushes off. They slide rapidly down the incline, accelerating towards the bottom due to low friction and gravity.",
         "questions": [
           {
             "id": "01",
-            "question_text": "Does the puck glide forward after release?",
+            "question_text": "Is a playground slide visible in the scene?",
             "dimensions": [
-              "motion"
+              "object",
+              "existence"
             ],
             "difficulty": "easy",
             "frame_indices": [
-              6,
               10,
-              14
+              30,
+              50
             ],
             "answer": 1
           },
           {
             "id": "02",
-            "question_text": "Is the puck's motion continuous without jumps?",
+            "question_text": "Does the person move from the top to the bottom of the slide?",
             "dimensions": [
-              "motion"
+              "motion",
+              "direction"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
+            "frame_indices": [
+              10,
+              30,
+              50
+            ],
+            "answer": 1
+          },
+          {
+            "id": "03",
+            "question_text": "Does the person slide smoothly without getting stuck halfway?",
+            "dimensions": [
+              "motion",
+              "interaction"
+            ],
+            "difficulty": "easy",
             "frame_indices": [
               10,
               20,
@@ -5652,38 +5685,26 @@
             "answer": 1
           },
           {
-            "id": "03",
-            "question_text": "Does the puck slow down abruptly within a short distance?",
+            "id": "04",
+            "question_text": "Does the person stop moving in the middle of the slope?",
             "dimensions": [
-              "motion"
+              "motion",
+              "interaction"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              10,
+              20,
               30,
-              50
+              40
             ],
             "answer": 0
           },
           {
-            "id": "04",
-            "question_text": "Does the puck stay on the ice rather than lifting off?",
-            "dimensions": [
-              "material"
-            ],
-            "difficulty": "easy",
-            "frame_indices": [
-              10,
-              30,
-              50
-            ],
-            "answer": 1
-          },
-          {
             "id": "05",
-            "question_text": "Does the puck keep gliding for a long distance before noticeably slowing?",
+            "question_text": "Does the person maintain contact with the slide surface?",
             "dimensions": [
-              "motion"
+              "spatial",
+              "interaction"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -5695,163 +5716,176 @@
           },
           {
             "id": "06",
-            "question_text": "Does the puck speed up without a force?",
+            "question_text": "Does the person float into the air above the slide?",
             "dimensions": [
-              "motion"
-            ],
-            "difficulty": "hard",
-            "frame_indices": [
-              10,
-              30,
-              50
-            ],
-            "answer": 0
-          },
-          {
-            "id": "07",
-            "question_text": "Does the puck maintain a mostly straight trajectory?",
-            "dimensions": [
-              "motion"
-            ],
-            "difficulty": "hard",
-            "frame_indices": [
-              10,
-              30,
-              50
-            ],
-            "answer": 1
-          },
-          {
-            "id": "08",
-            "question_text": "Does the puck visibly stick or jerk to a stop?",
-            "dimensions": [
-              "interaction"
-            ],
-            "difficulty": "hard",
-            "frame_indices": [
-              10,
-              30,
-              50
-            ],
-            "answer": 0
-          }
-        ]
-      },
-      "low_friction_scene_03": {
-        "scene_name": "A smooth disk gliding on glass table",
-        "scene_caption": "A smooth disk is released on the glass table and glides forward with minimal resistance, gradually losing speed.",
-        "questions": [
-          {
-            "id": "01",
-            "question_text": "Does the disk slide forward after release?",
-            "dimensions": [
-              "motion"
+              "spatial",
+              "direction"
             ],
             "difficulty": "easy",
             "frame_indices": [
-              6,
-              10,
-              14
-            ],
-            "answer": 1
-          },
-          {
-            "id": "02",
-            "question_text": "Is the motion smooth and continuous?",
-            "dimensions": [
-              "motion"
-            ],
-            "difficulty": "hard",
-            "frame_indices": [
-              10,
               20,
-              30,
               40,
-              50
-            ],
-            "answer": 1
-          },
-          {
-            "id": "03",
-            "question_text": "Does the disk maintain nearly the same speed across the clip?",
-            "dimensions": [
-              "motion"
-            ],
-            "difficulty": "hard",
-            "frame_indices": [
-              10,
-              30,
-              50
-            ],
-            "answer": 0
-          },
-          {
-            "id": "04",
-            "question_text": "Does the disk remain in contact with the glass table?",
-            "dimensions": [
-              "interaction"
-            ],
-            "difficulty": "easy",
-            "frame_indices": [
-              24,
-              28,
-              32
-            ],
-            "answer": 1
-          },
-          {
-            "id": "05",
-            "question_text": "Does the disk glide a long distance before slowing?",
-            "dimensions": [
-              "motion"
-            ],
-            "difficulty": "easy",
-            "frame_indices": [
-              10,
-              30,
-              50
-            ],
-            "answer": 1
-          },
-          {
-            "id": "06",
-            "question_text": "Does the disk come to a sudden stop without collision?",
-            "dimensions": [
-              "interaction"
-            ],
-            "difficulty": "easy",
-            "frame_indices": [
-              50,
-              55,
               59
             ],
             "answer": 0
           },
           {
             "id": "07",
-            "question_text": "Does the disk keep a stable orientation while sliding?",
+            "question_text": "Does the person sink into or pass through the slide material?",
             "dimensions": [
-              "motion"
+              "spatial",
+              "interaction"
+            ],
+            "difficulty": "easy",
+            "frame_indices": [
+              20,
+              40,
+              59
+            ],
+            "answer": 0
+          },
+          {
+            "id": "08",
+            "question_text": "Does the slide collapse or break under the person?",
+            "dimensions": [
+              "material",
+              "interaction"
+            ],
+            "difficulty": "hard",
+            "frame_indices": [
+              20,
+              40,
+              59
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      "low_friction_scene_03": {
+        "scene_name": "Butter sliding down hot pan",
+        "scene_caption": "A solid piece of yellow butter is placed on the sloped side of a hot frying pan. The heat melts the contact surface, creating a liquid layer that allows the butter to slide smoothly down toward the center due to gravity.",
+        "questions": [
+          {
+            "id": "01",
+            "question_text": "Is a piece of yellow butter visible in the frying pan?",
+            "dimensions": [
+              "object",
+              "existence"
             ],
             "difficulty": "easy",
             "frame_indices": [
               10,
+              20,
+              30
+            ],
+            "answer": 1
+          },
+          {
+            "id": "02",
+            "question_text": "Is the butter initially placed on the sloped side (not the flat bottom) of the pan?",
+            "dimensions": [
+              "spatial"
+            ],
+            "difficulty": "easy",
+            "frame_indices": [
+              5,
+              10,
+              15
+            ],
+            "answer": 1
+          },
+          {
+            "id": "03",
+            "question_text": "Does the butter move downward along the slope?",
+            "dimensions": [
+              "motion",
+              "direction"
+            ],
+            "difficulty": "easy",
+            "frame_indices": [
+              10,
+              20,
               30,
+              40
               50
             ],
             "answer": 1
           },
           {
-            "id": "08",
-            "question_text": "Does the disk speed up on its own while sliding?",
+            "id": "04",
+            "question_text": "Does the butter slide smoothly and continuously without sticking?",
             "dimensions": [
-              "motion"
+              "motion",
+              "interaction"
+            ],
+            "difficulty": "hard",
+            "frame_indices": [
+              20,
+              40,
+              59
+            ],
+            "answer": 1
+          },
+          {
+            "id": "05",
+            "question_text": "Does a shiny liquid trail (melted fat) appear behind or underneath the sliding butter?",
+            "dimensions": [
+              "appearance/texture",
+              "material",
+              "interaction"
             ],
             "difficulty": "hard",
             "frame_indices": [
               10,
               30,
-              50
+              50,
+              59
+            ],
+            "answer": 1
+          },
+          {
+            "id": "06",
+            "question_text": "Does the butter tumble or roll down like a dry rock?",
+            "dimensions": [
+              "motion",
+              "orientation"
+            ],
+            "difficulty": "easy",
+            "frame_indices": [
+              20,
+              40,
+              59
+            ],
+            "answer": 0
+          },
+          {
+            "id": "07",
+            "question_text": "Does the size of the solid butter block decrease as it slides (due to melting)?",
+            "dimensions": [
+              "size",
+              "material"
+            ],
+            "difficulty": "hard",
+            "frame_indices": [
+              10,
+              30,
+              50,
+              59
+            ],
+            "answer": 1
+          },
+          {
+            "id": "08",
+            "question_text": "Does the butter slide upwards against gravity?",
+            "dimensions": [
+              "direction",
+              "motion"
+            ],
+            "difficulty": "easy",
+            "frame_indices": [
+              20,
+              40,
+              59
             ],
             "answer": 0
           }
@@ -5893,17 +5927,17 @@
           },
           {
             "id": "03",
-            "question_text": "Does the lego block maintain nearly the same speed across the clip?",
+            "question_text": "Is there only one lego block during the clip",
             "dimensions": [
-              "motion"
+              "number"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
               50
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "04",
@@ -5935,9 +5969,9 @@
           },
           {
             "id": "06",
-            "question_text": "Does the lego block come to a sudden stop without collision?",
+            "question_text": "Does the the final state of lego block come to a stop?",
             "dimensions": [
-              "interaction"
+              "motion"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -6057,17 +6091,17 @@
           },
           {
             "id": "06",
-            "question_text": "Does the stone stop abruptly without collision?",
+            "question_text": "Does the stone nearly stop or deaccelerate at the final state?",
             "dimensions": [
-              "interaction"
+              "motion"
             ],
-            "difficulty": "easy",
+            "difficulty": "hard",
             "frame_indices": [
               50,
               55,
               59
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "07",
@@ -6087,11 +6121,11 @@
           },
           {
             "id": "08",
-            "question_text": "Does the stone veer or change direction noticeably while sliding?",
+            "question_text": "Does the stone bounce or jump erratically?",
             "dimensions": [
-              "direction"
+              "spatial"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               20,
@@ -6183,7 +6217,7 @@
             "id": "06",
             "question_text": "Does the sand maintain a granular texture throughout the motion?",
             "dimensions": [
-              "motion"
+              "texture"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -6261,7 +6295,7 @@
           },
           {
             "id": "03",
-            "question_text": "Do the fingers remain stationary as the sand flows through them?",
+            "question_text": "Do the fingers remain above the pile as the sand flows through them?",
             "dimensions": [
               "spatial"
             ],
@@ -6273,7 +6307,7 @@
               40,
               50
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "04",
@@ -6319,31 +6353,32 @@
           },
           {
             "id": "07",
-            "question_text": "Does the sand stop flowing when the hand is removed?",
+            "question_text": "Does the falling sand rejoin the pile on the ground?",
             "dimensions": [
-              "motion"
+              "interaction"
             ],
             "difficulty": "easy",
             "frame_indices": [
+              40,
+              45,
               50,
-              55,
-              59
+              55
             ],
             "answer": 1
           },
           {
             "id": "08",
-            "question_text": "Do falling grains spread slightly as they drop through the air?",
+            "question_text": "Does the sand stick to the hand like wet mud or glue?",
             "dimensions": [
-              "motion"
+              "material"
             ],
-            "difficulty": "easy",
+            "difficulty": "hard",
             "frame_indices": [
               10,
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           }
         ]
       },
@@ -6381,7 +6416,7 @@
           },
           {
             "id": "03",
-            "question_text": "Does the ball remain fully on top of the sand without sinking?",
+            "question_text": "Does the ball remain fully on top of the sand without partially sinking?",
             "dimensions": [
               "spatial"
             ],
@@ -6453,7 +6488,7 @@
           },
           {
             "id": "08",
-            "question_text": "Is the deformation of the sand consistent with the ball's impact force?",
+            "question_text": "Does the sand deform after the ball impacting",
             "dimensions": [
               "interaction"
             ],
@@ -6529,23 +6564,23 @@
           },
           {
             "id": "05",
-            "question_text": "Does the hand move in a continuous motion without sudden stops?",
+            "question_text": "Does the snow turn instantly into liquid water (puddle)?",
             "dimensions": [
-              "motion"
+              "material"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              50,
-              55,
-              59
+              30,
+              40,
+              50
             ],
             "answer": 1
           },
           {
             "id": "06",
-            "question_text": "Does the snow appear to be granular?",
+            "question_text": "Does the snow spring back to a flat surface immediately (like a sponge)?",
             "dimensions": [
-              "existence"
+              "shape"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -6553,7 +6588,7 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "07",
@@ -6571,11 +6606,12 @@
           },
           {
             "id": "08",
-            "question_text": "Is the snow's deformation consistent with the expected behavior of granular materials?",
+            "question_text": "Does the hand pass through the snow without leaving any mark (ghosting)?",
             "dimensions": [
-              "motion"
+              "motion",
+              "interaction"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               20,
@@ -6583,31 +6619,31 @@
               40,
               50
             ],
-            "answer": 1
+            "answer": 0
           }
         ]
       },
       "scene_05": {
-        "scene_name": "Grains collapsing and sliding down when a small mound becomes too steep",
-        "scene_caption": "A small pile of grains collapses and slides down as its slope becomes too steep, resulting in a flattened surface.",
+        "scene_name": "Pouring red and green bean layers",
+        "scene_caption": "Green mung beans are poured into a clear glass jar to form a base layer. Then, larger red adzuki beans are poured on top. The two types of beans remain as distinct, unmixed layers due to their granular nature.",
         "questions": [
           {
             "id": "01",
-            "question_text": "Does the grain mound initially have a steep slope before collapsing?",
+            "question_text": "Are green beans poured into the jar first?",
             "dimensions": [
               "motion"
             ],
             "difficulty": "easy",
             "frame_indices": [
-              1,
-              2,
-              4
+              10,
+              15,
+              20
             ],
             "answer": 1
           },
           {
             "id": "02",
-            "question_text": "Does the grain slide downwards as it falls?",
+            "question_text": "Are red beans poured on top of the green beans later?",
             "dimensions": [
               "motion"
             ],
