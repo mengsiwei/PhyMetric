@@ -6657,53 +6657,51 @@
           },
           {
             "id": "03",
-            "question_text": "Does the collapse happen in a single sudden jump with no flowing motion?",
+            "question_text": "Do the red and green beans form two distinct, separate layers?",
             "dimensions": [
-              "motion"
+              "spatial"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
-              20,
               30,
               40,
-              50
-            ],
-            "answer": 0
-          },
-          {
-            "id": "04",
-            "question_text": "Does the grain stop moving once it reaches a flatter surface?",
-            "dimensions": [
-              "motion"
-            ],
-            "difficulty": "easy",
-            "frame_indices": [
               50,
-              55,
               59
             ],
             "answer": 1
           },
           {
-            "id": "05",
-            "question_text": "Does the grain appear to flow like a granular material during the collapse?",
+            "id": "04",
+            "question_text": "Do the individual beans remain visible as solid particles (not merging)?",
             "dimensions": [
-              "motion"
+              "material"
             ],
             "difficulty": "hard",
             "frame_indices": [
               10,
-              20,
               30,
-              40,
               50
             ],
             "answer": 1
+          },
+          {
+            "id": "05",
+            "question_text": "Do the red and green beans mix to create a uniform brown/blended color?",
+            "dimensions": [
+              "material"
+            ],
+            "difficulty": "hard",
+            "frame_indices": [
+              30,
+              40,
+              50,
+              59
+            ],
+            "answer": 0
           },
           {
             "id": "06",
-            "question_text": "Does the grain mound become more stable after the collapse?",
+            "question_text": "Do the beans splash and ripple like a liquid upon impact?",
             "dimensions": [
               "motion"
             ],
@@ -6713,31 +6711,30 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "07",
-            "question_text": "Is the motion of the grain consistent with the behavior of granular materials?",
+            "question_text": "Does the red bean layer sink entirely to the bottom of the green layer?",
             "dimensions": [
               "motion"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
-              20,
               30,
               40,
-              50
+              50,
+              59
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "08",
-            "question_text": "Does the slope flatten noticeably after the collapse?",
+            "question_text": "Does the height of the bean increaing?",
             "dimensions": [
               "shape"
             ],
-            "difficulty": "easy",
+            "difficulty": "hard",
             "frame_indices": [
               10,
               30,
