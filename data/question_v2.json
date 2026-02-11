@@ -6574,7 +6574,7 @@
               40,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "06",
@@ -6730,7 +6730,7 @@
           },
           {
             "id": "08",
-            "question_text": "Does the height of the bean increaing?",
+            "question_text": "Does the height of the bean increase",
             "dimensions": [
               "shape"
             ],
@@ -6796,7 +6796,7 @@
             "id": "04",
             "question_text": "Does the stone increase in amount throughout the video?",
             "dimensions": [
-              "motion"
+              "number"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -6895,8 +6895,9 @@
             "difficulty": "easy",
             "frame_indices": [
               10,
+              20,
               30,
-              50
+              40
             ],
             "answer": 1
           },
@@ -7022,9 +7023,9 @@
           },
           {
             "id": "03",
-            "question_text": "Is there a visible force or support continuing after detachment?",
+            "question_text": "Is there only one apple during the clip?",
             "dimensions": [
-              "existence"
+              "number"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -7032,7 +7033,7 @@
               30,
               50
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "04",
@@ -7080,11 +7081,11 @@
           },
           {
             "id": "07",
-            "question_text": "Does the apple collide with the ground at the end?",
+            "question_text": "Does the apple roll after colliding with the ground?",
             "dimensions": [
-              "interaction"
+              "motion"
             ],
-            "difficulty": "easy",
+            "difficulty": "hard",
             "frame_indices": [
               50,
               55,
@@ -7156,11 +7157,11 @@
           },
           {
             "id": "04",
-            "question_text": "Does the key keep a nearly constant falling speed?",
+            "question_text": "Is there only one key during the clip?",
             "dimensions": [
-              "motion"
+              "number"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               20,
@@ -7168,7 +7169,7 @@
               40,
               50
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "05",
@@ -7194,9 +7195,10 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              30,
+              35,
+              40,
+              45
             ],
             "answer": 1
           },
@@ -7208,9 +7210,10 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              30,
+              35,
+              40,
+              45
             ],
             "answer": 1
           },
@@ -7232,7 +7235,7 @@
       },
       "earth_scene_05": {
         "scene_name": "A tennis ball falling",
-        "scene_caption": "A tennis ball is released in mid air and falls downward under gravity until it impacts the ground.",
+        "scene_caption": "A tennis ball is released in mid air from hand, and falls downward under gravity until it impacts the ground.",
         "questions": [
           {
             "id": "01",
@@ -7278,11 +7281,11 @@
           },
           {
             "id": "04",
-            "question_text": "Does the ball fall at nearly constant speed?",
+            "question_text": "Does the appearance of the ball have no change during the clip?",
             "dimensions": [
-              "direction"
+              "appearance/texture"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
@@ -7322,15 +7325,16 @@
           },
           {
             "id": "07",
-            "question_text": "Does the ball's motion change abruptly at impact?",
+            "question_text": "Does the ball bounce back a little heightafter impact with the ground?",
             "dimensions": [
-              "interaction"
+              "motion"
             ],
-            "difficulty": "easy",
+            "difficulty": "hard",
             "frame_indices": [
-              24,
-              28,
-              32
+              35,
+              40,
+              45,
+              50
             ],
             "answer": 1
           },
@@ -7372,9 +7376,9 @@
           },
           {
             "id": "02",
-            "question_text": "As the rock falls away from the hand, is there any new object appearing?",
+            "question_text": "As the stone falls away from the hand, is there any new object appearing?",
             "dimensions": [
-              "direction"
+              "existence"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -7388,7 +7392,7 @@
             "id": "03",
             "question_text": "Does the stone increase in amount throughout the video?",
             "dimensions": [
-              "motion"
+              "number"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -7480,7 +7484,7 @@
       },
       "space_scene_02": {
         "scene_name": "A wrench falling in low gravity",
-        "scene_caption": "A wrench is released in a low-gravity environment and falls downward slowly until it reaches the ground.",
+        "scene_caption": "A wrench is released in a moon environment and falls downward slowly until it reaches the ground.",
         "questions": [
           {
             "id": "01",
@@ -7512,29 +7516,31 @@
           },
           {
             "id": "03",
-            "question_text": "Does the wrench fall as fast as a typical Earth fall (rapid acceleration)?",
+            "question_text": "Does the wrench rotate when it falling?",
             "dimensions": [
               "direction"
             ],
             "difficulty": "hard",
             "frame_indices": [
               10,
+              20,
               30,
-              50
+              40
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "04",
-            "question_text": "Is there little to no air drag visible?",
+            "question_text": "Does the wrench bounce back a little height when colliding with the ground",
             "dimensions": [
-              "existence"
+              "motion"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
+              25,
               30,
-              50
+              35,
+              40
             ],
             "answer": 1
           },
@@ -7566,7 +7572,7 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "07",
@@ -7599,12 +7605,12 @@
         ]
       },
       "space_scene_03": {
-        "scene_name": "A small feather falling toward an asteroid",
-        "scene_caption": "A small feather is dropped above an asteroid and falls downward slowly under weak gravity until it reaches the asteroid's surface.",
+        "scene_name": "A small feather falling on a moon",
+        "scene_caption": "A small feather is dropped on the moon surface and falls downward slowly under weak gravity until it reaches the moon's surface.",
         "questions": [
           {
             "id": "01",
-            "question_text": "Does the feather move toward the asteroid after release?",
+            "question_text": "Does the feather move toward the surface after release?",
             "dimensions": [
               "direction"
             ],
@@ -7618,9 +7624,9 @@
           },
           {
             "id": "02",
-            "question_text": "Does the feather fall quickly like on Earth?",
+            "question_text": "Does the feather fall side-by-side?",
             "dimensions": [
-              "direction"
+              "motion"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -7628,7 +7634,7 @@
               30,
               50
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "03",
@@ -7717,8 +7723,8 @@
         ]
       },
       "space_scene_04": {
-        "scene_name": "An apple falling in weak gravity",
-        "scene_caption": "An apple is released in a weak-gravity space environment and falls downward until it reaches a surface and stops.",
+        "scene_name": "An apple falling on the Moon",
+        "scene_caption": "An apple is released on the Moon space environment from a hand and falls downward until it reaches a surface and stops.",
         "questions": [
           {
             "id": "01",
@@ -7736,7 +7742,7 @@
           },
           {
             "id": "02",
-            "question_text": "Does the apple move upward overall?",
+            "question_text": "Does the apple move upward before hitting the ground?",
             "dimensions": [
               "direction"
             ],
@@ -7750,9 +7756,9 @@
           },
           {
             "id": "03",
-            "question_text": "Does the apple fall at about the same speed as on Earth?",
+            "question_text": "Does the apple bounce back a little height after impact?",
             "dimensions": [
-              "direction"
+              "motion"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -7760,7 +7766,7 @@
               30,
               50
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "04",
@@ -7790,7 +7796,7 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "06",
@@ -7808,7 +7814,7 @@
           },
           {
             "id": "07",
-            "question_text": "Does the apple's motion change abruptly at contact?",
+            "question_text": "Does the apple's motion change at contact?",
             "dimensions": [
               "interaction"
             ],
@@ -7837,8 +7843,8 @@
         ]
       },
       "space_scene_05": {
-        "scene_name": "A ping pong ball moving downward in low gravity",
-        "scene_caption": "A ping pong ball is released in low gravity and drifts downward under weak gravity until it reaches the ground.",
+        "scene_name": "A ping pong ball moving downward on the Moon",
+        "scene_caption": "A ping pong ball is released on the Moon from a hand and drifts downward under weak gravity until it reaches the ground.",
         "questions": [
           {
             "id": "01",
@@ -7856,7 +7862,7 @@
           },
           {
             "id": "02",
-            "question_text": "Does the ping pong ball drift upward overall?",
+            "question_text": "Does the ping pong ball drift upward before hitting the ground?",
             "dimensions": [
               "direction"
             ],
@@ -7964,15 +7970,18 @@
         "questions": [
           {
             "id": "01",
-            "question_text": "Does the ice cube start to melt immediately upon contact with the warm plate?",
+            "question_text": "Does the ice cube start to melt immediately on the warm plate?",
             "dimensions": [
               "interaction"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              24,
-              28,
-              32
+              5,
+              15,
+              25,
+              35,
+              45,
+              55
             ],
             "answer": 1
           },
@@ -8008,11 +8017,11 @@
           },
           {
             "id": "04",
-            "question_text": "Does the melting speed stay perfectly constant with no visible change over time?",
+            "question_text": "Does the plate still stationary during the clip?",
             "dimensions": [
-              "motion"
+              "shape"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               20,
@@ -8020,7 +8029,7 @@
               40,
               50
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "05",
@@ -8068,11 +8077,11 @@
           },
           {
             "id": "08",
-            "question_text": "Is the plate visibly warm, such as by color change or heat distortion effects?",
+            "question_text": "Is there only one ice cube during the clip?",
             "dimensions": [
-              "appearance/texture"
+              "number"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
@@ -8188,15 +8197,17 @@
           },
           {
             "id": "08",
-            "question_text": "Is the melting process slower at the beginning and faster as more wax melts?",
+            "question_text": "Does the height of the candle decrease?",
             "dimensions": [
-              "material"
+              "shape"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              1,
-              2,
-              4
+              10,
+              20,
+              30,
+              40,
+              50
             ],
             "answer": 1
           }
@@ -8208,15 +8219,17 @@
         "questions": [
           {
             "id": "01",
-            "question_text": "Does the butter start to melt immediately upon contact with the pan?",
+            "question_text": "Does the butter start to melt immediately on the pan?",
             "dimensions": [
               "interaction"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              24,
-              28,
-              32
+              10,
+              20,
+              30,
+              40,
+              50
             ],
             "answer": 1
           },
@@ -8236,21 +8249,21 @@
           },
           {
             "id": "03",
-            "question_text": "Are there visible heat cues like steam or shimmer from the pan before the butter touches?",
+            "question_text": "Are there visible heat cues like steam or shimmer from the pan during the clip?",
             "dimensions": [
               "appearance/texture"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              1,
-              2,
-              4
+              10,
+              30,
+              50
             ],
             "answer": 1
           },
           {
             "id": "04",
-            "question_text": "Does the butter stay solid the whole time?",
+            "question_text": "Does the butter stay solid (no shape change) the whole time?",
             "dimensions": [
               "material"
             ],
@@ -8264,9 +8277,9 @@
           },
           {
             "id": "05",
-            "question_text": "Does the butter melt at a consistent rate?",
+            "question_text": "Does the butter size decrease during the clip?",
             "dimensions": [
-              "motion"
+              "shape"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -8310,9 +8323,9 @@
           },
           {
             "id": "08",
-            "question_text": "Does the butter melt faster in the center of the pan compared to the edges?",
+            "question_text": "Is there any bubble appear during the melting",
             "dimensions": [
-              "motion"
+              "existence"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -8402,7 +8415,7 @@
           },
           {
             "id": "06",
-            "question_text": "Does the snow appear to melt faster in areas with more sunlight exposure?",
+            "question_text": "Does the mixture of ice and water appear at the melting area?",
             "dimensions": [
               "existence"
             ],
@@ -8590,7 +8603,7 @@
             "id": "02",
             "question_text": "Is the reflection of the dancer visible in the mirror throughout the entire spin?",
             "dimensions": [
-              "appearance/texture"
+              "existence"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -8634,11 +8647,11 @@
           },
           {
             "id": "05",
-            "question_text": "Does the reflection show the same speed of motion as the dancer?",
+            "question_text": "Is there only one dancer during the clip?",
             "dimensions": [
-              "motion"
+              "number"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
@@ -8662,9 +8675,9 @@
           },
           {
             "id": "07",
-            "question_text": "Is the lighting consistent on both the dancer and their reflection?",
+            "question_text": "Is the shadow consistent on both the dancer and their reflection?",
             "dimensions": [
-              "appearance/texture"
+              "motion"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -8856,7 +8869,7 @@
             "id": "03",
             "question_text": "Does the reflection appear directly beneath the car, maintaining a realistic angle?",
             "dimensions": [
-              "appearance/texture"
+              "existence"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -8870,7 +8883,8 @@
             "id": "04",
             "question_text": "Is the wet road surface visibly shiny, indicating the presence of water?",
             "dimensions": [
-              "appearance/texture"
+              "appearance/texture",
+              "material"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -8912,7 +8926,7 @@
             "id": "07",
             "question_text": "Is there a consistent light source that could cause the reflection to appear on the road?",
             "dimensions": [
-              "appearance/texture"
+              "existence"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -8926,9 +8940,10 @@
           },
           {
             "id": "08",
-            "question_text": "Does the car's speed appear consistent with the length of the reflection?",
+            "question_text": "Does the car's shape have no change during the clip",
             "dimensions": [
-              "motion"
+              "shape",
+              "size"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -9010,9 +9025,10 @@
           },
           {
             "id": "05",
-            "question_text": "Does the intensity of the reflected light vary with the movement of the water?",
+            "question_text": "Does the surface of the water shiny (golden color)?",
             "dimensions": [
-              "motion"
+              "color",
+              "material"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -9062,7 +9078,7 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           }
         ]
       },
@@ -9212,9 +9228,9 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              50,
-              55,
-              59
+              20,
+              30,
+              40
             ],
             "answer": 1
           },
@@ -9311,8 +9327,8 @@
         ]
       },
       "scene_02": {
-        "scene_name": "A straw looking broken when placed in a cup",
-        "scene_caption": "A straw is partially submerged in a cup of water, appearing bent at the water's surface due to refraction.",
+        "scene_name": "A straw looking broken when placed in a glass",
+        "scene_caption": "A straw is partially submerged in a glass of water, appearing bent at the water's surface due to refraction.",
         "questions": [
           {
             "id": "01",
@@ -9330,15 +9346,17 @@
           },
           {
             "id": "02",
-            "question_text": "Is the bending of the straw consistent with the principles of refraction?",
+            "question_text": "Is there only one straw the whole time?",
             "dimensions": [
-              "motion"
+              "number"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              50,
-              55,
-              59
+              10,
+              20,
+              30,
+              40,
+              50
             ],
             "answer": 1
           },
@@ -9362,7 +9380,8 @@
             "id": "04",
             "question_text": "Is the cup filled with a clear liquid?",
             "dimensions": [
-              "material"
+              "material",
+              "existence"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -9408,9 +9427,9 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              50,
-              55,
-              59
+              20,
+              30,
+              40
             ],
             "answer": 1
           },
@@ -9494,15 +9513,16 @@
           },
           {
             "id": "05",
-            "question_text": "Is the bending of the light consistent with the shape of the prism?",
+            "question_text": "Does the prism's shape have no change during the clip?",
             "dimensions": [
               "shape"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              50,
-              55,
-              59
+              20,
+              30,
+              40,
+              50
             ],
             "answer": 1
           },
@@ -9522,7 +9542,7 @@
           },
           {
             "id": "07",
-            "question_text": "Does the light beam change color as it passes through the prism?",
+            "question_text": "Does the light beam change color as it passes through the prism (appear rainbow color)?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -9684,7 +9704,7 @@
             "dimensions": [
               "size"
             ],
-            "difficulty": "easy",
+            "difficulty": "hard",
             "frame_indices": [
               10,
               30,
@@ -9744,7 +9764,7 @@
             "dimensions": [
               "material"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
@@ -9801,60 +9821,30 @@
     },
     "Shadow": {
       "scene_01": {
-        "scene_name": "A tree casting a long shadow at sunset",
-        "scene_caption": "As the sun sets, a tree casts a long shadow across the ground, stretching away from the light source.",
+        "scene_name": "Flashlight beam reflecting off a mirror",
+        "scene_caption": "In a dim room, a hand holds a flashlight and aims a narrow beam of light at a flat mirror at an angle. The light beam reflects off the mirror surface and illuminates a small object on the opposite wall.",
         "questions": [
           {
             "id": "01",
-            "question_text": "Does the length of the shadow increase as the sun gets lower in the sky?",
+            "question_text": "Is a flashlight visible in the hand?",
             "dimensions": [
-              "appearance/texture"
+              "object",
+              "existence"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
-              30,
-              50
+              20,
+              30
             ],
             "answer": 1
           },
           {
             "id": "02",
-            "question_text": "Does the shadow remain attached to the base of the tree?",
+            "question_text": "Is there a flat mirror surface in the scene?",
             "dimensions": [
-              "appearance/texture"
-            ],
-            "difficulty": "hard",
-            "frame_indices": [
-              10,
-              20,
-              30,
-              40,
-              50
-            ],
-            "answer": 1
-          },
-          {
-            "id": "03",
-            "question_text": "Does the shadow move smoothly as the sun sets?",
-            "dimensions": [
-              "motion"
-            ],
-            "difficulty": "hard",
-            "frame_indices": [
-              10,
-              20,
-              30,
-              40,
-              50
-            ],
-            "answer": 1
-          },
-          {
-            "id": "04",
-            "question_text": "Is the sun visible in the scene, indicating the direction of the light source?",
-            "dimensions": [
-              "direction"
+              "object",
+              "existence"
             ],
             "difficulty": "easy",
             "frame_indices": [
@@ -9865,57 +9855,90 @@
             "answer": 1
           },
           {
-            "id": "05",
-            "question_text": "Does the shadow appear to change in size or shape abruptly?",
+            "id": "03",
+            "question_text": "Does a visible beam of light travel from the flashlight to the mirror?",
             "dimensions": [
-              "shape"
+              "motion",
+              "appearance/texture"
+            ],
+            "difficulty": "easy",
+            "frame_indices": [
+              20,
+              40,
+              59
+            ],
+            "answer": 1
+          },
+          {
+            "id": "04",
+            "question_text": "Does the light beam reflect off the mirror at an angle?",
+            "dimensions": [
+              "direction",
+              "interaction"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
+              20,
+              40,
+              59
+            ],
+            "answer": 1
+          },
+          {
+            "id": "05",
+            "question_text": "Does the light beam pass directly through the mirror like a window?",
+            "dimensions": [
+              "material",
+              "interaction"
+            ],
+            "difficulty": "easy",
+            "frame_indices": [
+              20,
               30,
+              40,
               50
             ],
             "answer": 0
           },
           {
             "id": "06",
-            "question_text": "Is the shadow edge soft and blurred rather than sharp?",
-            "dimensions": [
-              "appearance/texture"
-            ],
-            "difficulty": "hard",
-            "frame_indices": [
-              10,
-              30,
-              50
-            ],
-            "answer": 0
-          },
-          {
-            "id": "07",
-            "question_text": "Does the shadow's length correlate with the sun's position in the sky?",
-            "dimensions": [
-              "appearance/texture"
-            ],
-            "difficulty": "hard",
-            "frame_indices": [
-              10,
-              30,
-              50
-            ],
-            "answer": 1
-          },
-          {
-            "id": "08",
-            "question_text": "Is the shadow's direction consistent with the sun's position throughout the video?",
+            "question_text": "Is the angle of the reflected beam roughly symmetrical to the incident beam?",
             "dimensions": [
               "direction"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
               20,
+              30,
+              40,
+              50
+            ],
+            "answer": 1
+          },
+          {
+            "id": "07",
+            "question_text": "Does the light beam bend into a curve during its path?",
+            "dimensions": [
+              "direction",
+              "motion"
+            ],
+            "difficulty": "easy",
+            "frame_indices": [
+              20,
+              40,
+              59
+            ],
+            "answer": 0
+          },
+          {
+            "id": "08",
+            "question_text": "Does the mirror surface show a bright spot (specular highlight) where the beam hits?",
+            "dimensions": [
+              "appearance/texture",
+              "interaction"
+            ],
+            "difficulty": "hard",
+            "frame_indices": [
               30,
               40,
               50
@@ -9998,7 +10021,7 @@
               30,
               50
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "06",
@@ -10032,11 +10055,11 @@
           },
           {
             "id": "08",
-            "question_text": "Is the shadow's length proportional to the distance from the light source?",
+            "question_text": "Does the shadow's shape look like a person?",
             "dimensions": [
-              "appearance/texture"
+              "shape"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
@@ -10174,7 +10197,7 @@
       },
       "scene_04": {
         "scene_name": "A rotating basketball casting a changing shadow",
-        "scene_caption": "A basketball rotates on a flat surface, causing its shadow to change shape and position on the ground.",
+        "scene_caption": "A basketball rotates on a flat surface during the sunset, causing its shadow to change shape and position on the ground.",
         "questions": [
           {
             "id": "01",
@@ -10266,7 +10289,7 @@
           },
           {
             "id": "07",
-            "question_text": "Does the shadow's length change as the object rotates?",
+            "question_text": "Does the shadow's length change abruptly as the object rotates?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -10276,11 +10299,11 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "08",
-            "question_text": "Is the shadow's movement consistent with the laws of optics?",
+            "question_text": "Does the shadow remain attached to the basketball?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -10374,21 +10397,21 @@
           },
           {
             "id": "06",
-            "question_text": "Are the shadows noticeably larger or smaller than the blocks even when close to the wall?",
+            "question_text": "Are the shadows noticeably larger or smaller?",
             "dimensions": [
               "size"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
               50
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "id": "07",
-            "question_text": "Is the direction of the shadows consistent with the direction of the flashlight?",
+            "question_text": "Is the position of the shadows consistent with the direction of the flashlight?",
             "dimensions": [
               "direction"
             ],
@@ -10484,7 +10507,8 @@
             "id": "05",
             "question_text": "Does the match head carry a bright orange and yellow flame?",
             "dimensions": [
-              "motion"
+              "motion",
+              "color"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -10558,7 +10582,7 @@
           },
           {
             "id": "02",
-            "question_text": "Is the smoke visible immediately after the candle is blown out?",
+            "question_text": "Is the smoke visible before and after the candle is blown out?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -10574,9 +10598,10 @@
             "id": "03",
             "question_text": "Does the smoke dissipate gradually as it rises?",
             "dimensions": [
-              "appearance/texture"
+              "appearance/texture",
+              "existence"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
@@ -10602,9 +10627,10 @@
           },
           {
             "id": "05",
-            "question_text": "Is the smoke density decreasing as it moves away from the wick?",
+            "question_text": "Is the smoke spread after the candle is blown out?",
             "dimensions": [
-              "direction"
+              "shape",
+              "size"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -10630,17 +10656,17 @@
           },
           {
             "id": "07",
-            "question_text": "Is the candle flame completely extinguished before the smoke starts rising?",
+            "question_text": "Is the candle flame appear again at the end?",
             "dimensions": [
-              "appearance/texture"
+              "existence"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              1,
-              2,
-              4
+              45,
+              50,
+              55
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "08",
@@ -10650,8 +10676,9 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              10,
+              20,
               30,
+              40,
               50
             ],
             "answer": 1
@@ -10660,7 +10687,7 @@
       },
       "scene_03": {
         "scene_name": "Incense smoke slowly drifting upward",
-        "scene_caption": "A thin stream of incense smoke rises gently from a burning stick, curling and dispersing into the air.",
+        "scene_caption": "A thin stream of incense smoke rises gently, curling and dispersing into the air.",
         "questions": [
           {
             "id": "01",
@@ -10670,9 +10697,9 @@
             ],
             "difficulty": "hard",
             "frame_indices": [
-              50,
-              55,
-              59
+              10,
+              30,
+              50
             ],
             "answer": 1
           },
@@ -10734,11 +10761,11 @@
           },
           {
             "id": "06",
-            "question_text": "Is the smoke density decreasing as it moves further from the incense stick?",
+            "question_text": "Is the smoke color appear to be blue and white?",
             "dimensions": [
-              "interaction"
+              "color"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
@@ -10748,11 +10775,11 @@
           },
           {
             "id": "07",
-            "question_text": "Does the smoke rise at a consistent speed?",
+            "question_text": "Does the tip of the incense stick appear to be blace",
             "dimensions": [
-              "direction"
+              "color"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               20,
@@ -10844,11 +10871,11 @@
           },
           {
             "id": "05",
-            "question_text": "Does the steam dissipate gradually as it rises?",
+            "question_text": "Does the steam color appear to be semitransparent?",
             "dimensions": [
-              "appearance/texture"
+              "color"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
@@ -10874,11 +10901,11 @@
           },
           {
             "id": "07",
-            "question_text": "Does the steam originate from the surface of the tea and not from the sides of the cup?",
+            "question_text": "Does the steam continuous originate from the surface of the tea?",
             "dimensions": [
-              "appearance/texture"
+              "number"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
@@ -10890,9 +10917,9 @@
             "id": "08",
             "question_text": "Is the amount of steam consistent with the size of the cup?",
             "dimensions": [
-              "appearance/texture"
+              "size"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               20,
@@ -10970,7 +10997,8 @@
             "id": "05",
             "question_text": "Does the smoke maintain a consistent color as it disperses?",
             "dimensions": [
-              "appearance/texture"
+              "appearance/texture",
+              "color"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -10984,11 +11012,11 @@
           },
           {
             "id": "06",
-            "question_text": "Is the dispersal of smoke smooth without abrupt changes in direction?",
+            "question_text": "Is the smoke's color appear to be dark (black)?",
             "dimensions": [
-              "direction"
+              "color"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               20,
@@ -11000,11 +11028,11 @@
           },
           {
             "id": "07",
-            "question_text": "Does the smoke behave as expected under normal atmospheric conditions?",
+            "question_text": "Does the smoke wave the whole time?",
             "dimensions": [
-              "appearance/texture"
+              "motion"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
               10,
               30,
@@ -11014,17 +11042,17 @@
           },
           {
             "id": "08",
-            "question_text": "Is the initial rise of the smoke faster than its dispersal?",
+            "question_text": "Does the fire appear again at the end?",
             "dimensions": [
-              "direction"
+              "existence"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              1,
-              2,
-              4
+              45,
+              50,
+              55
             ],
-            "answer": 1
+            "answer": 0
           }
         ]
       }
@@ -11085,8 +11113,8 @@
             "difficulty": "easy",
             "frame_indices": [
               1,
-              2,
-              4
+              4,
+              8
             ],
             "answer": 1
           },
@@ -11230,9 +11258,9 @@
             ],
             "difficulty": "easy",
             "frame_indices": [
-              10,
+              20,
               30,
-              50
+              40
             ],
             "answer": 1
           },
@@ -11254,7 +11282,8 @@
             "id": "08",
             "question_text": "Is the splash size reasonable for a small grape?",
             "dimensions": [
-              "appearance/texture"
+              "appearance/texture",
+              "size"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -11488,7 +11517,7 @@
           },
           {
             "id": "08",
-            "question_text": "Is the splash size reasonable for a small marble?",
+            "question_text": "Is the splash size reasonable for a marble?",
             "dimensions": [
               "appearance/texture"
             ],
@@ -11702,7 +11731,8 @@
             "id": "06",
             "question_text": "Is the honey translucent?",
             "dimensions": [
-              "motion"
+              "color",
+              "material"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -11844,19 +11874,20 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "08",
-            "question_text": "Does the condensed milk gradually slow after pouring stops?",
+            "question_text": "Does the size of condensed milk gradually increase?",
             "dimensions": [
-              "motion"
+              "size"
             ],
-            "difficulty": "hard",
+            "difficulty": "easy",
             "frame_indices": [
-              50,
-              55,
-              59
+              20,
+              30,
+              40,
+              50
             ],
             "answer": 1
           }
@@ -11936,13 +11967,13 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "06",
-            "question_text": "Does the oil maintain a cohesive surface rather than breaking into many droplets?",
+            "question_text": "Does the oil maintain a cohesive surface?",
             "dimensions": [
-              "number"
+              "material"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -11970,9 +12001,9 @@
           },
           {
             "id": "08",
-            "question_text": "Does the oil's motion slow over time?",
+            "question_text": "Does the oil's color remain yellow and shiny?",
             "dimensions": [
-              "motion"
+              "color"
             ],
             "difficulty": "hard",
             "frame_indices": [
@@ -12048,15 +12079,16 @@
           },
           {
             "id": "05",
-            "question_text": "Does the molasses stretch into a strand before breaking?",
+            "question_text": "Does the molasses appear a liquid bridge when pouring down?",
             "dimensions": [
-              "motion"
+              "existence"
             ],
             "difficulty": "hard",
             "frame_indices": [
-              1,
-              2,
-              4
+              10,
+              20,
+              30,
+              40
             ],
             "answer": 1
           },
@@ -12086,7 +12118,7 @@
               30,
               50
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "08",
@@ -12214,7 +12246,7 @@
           },
           {
             "id": "08",
-            "question_text": "Does the jam's motion slow as it settles?",
+            "question_text": "Does the motion of the jam at rest at the end?",
             "dimensions": [
               "motion"
             ],
