@@ -1,0 +1,4 @@
+# PhyMetric human_eval — dependencies for app.py (Flask annotation server).
+# analyze.py uses only the Python standard library.
+
+flask>=3.0.0,<4
