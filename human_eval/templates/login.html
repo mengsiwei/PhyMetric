@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Login — PhyMetric Human Eval{% endblock %}
+
+{% block body %}
+<div class="container" style="max-width:440px;padding-top:80px;">
+  <div class="card">
+    <h2 style="margin-bottom:4px;">Welcome</h2>
+    <p style="color:var(--muted);font-size:0.9rem;margin-bottom:24px;">
+      Physics benchmark evaluation — <strong>{{ run_label or "Human Study" }}</strong>
+    </p>
+
+    {% if error %}
+    <div style="background:#4a1a1a;border:1px solid #d94040;border-radius:6px;padding:10px 14px;margin-bottom:16px;color:#f08080;font-size:0.9rem;">
+      {{ error }}
+    </div>
+    {% endif %}
+
+    <form method="POST" action="/">
+      <label style="display:block;font-size:0.85rem;color:var(--muted);margin-bottom:6px;">
+        Your name / ID
+      </label>
+      <input
+        type="text"
+        name="name"
+        placeholder="e.g. alice"
+        autofocus
+        autocomplete="off"
+        style="
+          width:100%;
+          padding:10px 14px;
+          background:var(--bg);
+          border:1px solid var(--border);
+          border-radius:var(--radius);
+          color:var(--text);
+          font-size:1rem;
+          margin-bottom:16px;
+          outline:none;
+        "
+        onfocus="this.style.borderColor='var(--accent)'"
+        onblur="this.style.borderColor='var(--border)'"
+      >
+      <button
+        type="submit"
+        style="
+          width:100%;
+          padding:12px;
+          background:var(--accent);
+          color:#fff;
+          border:none;
+          border-radius:var(--radius);
+          font-size:1rem;
+          font-weight:600;
+          cursor:pointer;
+        "
+      >
+        Start Annotating →
+      </button>
+    </form>
+
+    <p style="color:var(--muted);font-size:0.8rem;margin-top:16px;text-align:center;">
+      Use only letters, numbers, hyphens, underscores.<br>
+      Your progress is saved automatically.
+    </p>
+  </div>
+</div>
+{% endblock %}

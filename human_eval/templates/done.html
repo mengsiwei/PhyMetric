@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Done — PhyMetric Human Eval{% endblock %}
+
+{% block body %}
+<div class="container" style="max-width:480px;padding-top:80px;text-align:center;">
+  <div class="card">
+    <div style="font-size:3rem;margin-bottom:16px;">🎉</div>
+    <h2 style="margin-bottom:8px;">All done, {{ annotator_id }}!</h2>
+    <p style="color:var(--muted);font-size:0.95rem;margin-bottom:24px;">
+      You answered all <strong>{{ answered }}</strong> / {{ total }} questions.<br>
+      Thank you for your contribution to <em>{{ run_label or "PhyMetric" }}</em>.
+    </p>
+    <div style="display:flex;gap:10px;justify-content:center;">
+      <a href="/annotate/0" class="btn btn-ghost">Review from beginning</a>
+      <a href="/export/{{ annotator_id }}"
+         style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;
+                background:var(--accent);color:#fff;border-radius:var(--radius);
+                font-weight:600;text-decoration:none;font-size:0.95rem;">
+        ↓ Download my answers
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

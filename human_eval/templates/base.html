@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}PhyMetric Human Eval{% endblock %}</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0f1117;
+      --surface:  #1a1d27;
+      --border:   #2e3244;
+      --text:     #e8eaf0;
+      --muted:    #7a7f99;
+      --accent:   #5b8cfa;
+      --yes:      #2ea84e;
+      --yes-h:    #38c45e;
+      --no:       #d94040;
+      --no-h:     #f05050;
+      --radius:   10px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100vh;
+    }
+
+    nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    nav .brand { font-weight: 700; font-size: 1.1rem; color: var(--accent); }
+    nav .meta  { color: var(--muted); font-size: 0.85rem; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.85rem; }
+    nav a:hover { color: var(--text); }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    h2 { font-size: 1.2rem; margin-bottom: 12px; }
+    h3 { font-size: 1rem; color: var(--muted); margin-bottom: 8px; font-weight: 500; }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .tag-hard   { background: #4a1a1a; color: #f08080; }
+    .tag-easy   { background: #1a3a2a; color: #60d090; }
+    .tag-dim    { background: #1e2a44; color: #7ab0f0; }
+
+    .progress-bar-wrap {
+      background: var(--border);
+      border-radius: 4px;
+      height: 6px;
+      width: 100%;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 4px;
+      transition: width 0.3s;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .btn-ghost:hover { border-color: var(--text); color: var(--text); }
+
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+  </style>
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <nav>
+    <span class="brand">⚗️ PhyMetric Human Eval</span>
+    <span class="meta">{{ run_label or "" }}</span>
+    <div style="display:flex;gap:12px;align-items:center;">
+      {% if session.get('annotator_id') %}
+        <span class="meta">👤 {{ session.annotator_id }}</span>
+        <a href="/logout">Logout</a>
+      {% endif %}
+      <a href="/progress">Progress</a>
+    </div>
+  </nav>
+  {% block body %}{% endblock %}
+</body>
+</html>

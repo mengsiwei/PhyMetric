@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Progress — PhyMetric Human Eval{% endblock %}
+
+{% block body %}
+<div class="container" style="max-width:700px;padding-top:32px;">
+
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+    <h2 style="font-size:1.3rem;">Annotation Progress</h2>
+    <span style="color:var(--muted);font-size:0.85rem;">
+      {{ run_label or "Human Study" }} · {{ total }} questions total
+    </span>
+  </div>
+
+  {% if annotators %}
+  <div class="card" style="padding:0;overflow:hidden;">
+    <table>
+      <thead>
+        <tr>
+          <th>Annotator</th>
+          <th>Answered</th>
+          <th>Progress</th>
+          <th>Accuracy vs GT</th>
+          <th>Export</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for a in annotators %}
+        <tr>
+          <td style="font-weight:600;">{{ a.id }}</td>
+          <td style="color:var(--muted);">{{ a.answered }} / {{ a.total }}</td>
+          <td style="min-width:160px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="progress-bar-wrap" style="flex:1;height:8px;">
+                <div class="progress-bar-fill" style="width:{{ a.pct }}%"></div>
+              </div>
+              <span style="color:var(--muted);font-size:0.8rem;white-space:nowrap;">{{ a.pct }}%</span>
+            </div>
+          </td>
+          <td>
+            {% if a.answered > 0 %}
+              <span style="font-weight:600;color:{% if a.accuracy >= 75 %}var(--yes){% elif a.accuracy >= 50 %}#f0b040{% else %}var(--no){% endif %};">
+                {{ a.accuracy }}%
+              </span>
+              <span style="color:var(--muted);font-size:0.8rem;"> ({{ a.correct }}/{{ a.answered }})</span>
+            {% else %}
+              <span style="color:var(--muted);">—</span>
+            {% endif %}
+          </td>
+          <td>
+            <a href="/export/{{ a.id }}" style="color:var(--accent);font-size:0.85rem;text-decoration:none;">
+              ↓ JSON
+            </a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div style="margin-top:12px;text-align:right;">
+    <a href="/export_all" style="color:var(--accent);font-size:0.85rem;text-decoration:none;">
+      ↓ Export all annotators (JSON)
+    </a>
+  </div>
+
+  {% else %}
+  <div class="card" style="text-align:center;color:var(--muted);padding:40px;">
+    No annotations yet. Share the login URL with your annotators.
+  </div>
+  {% endif %}
+
+  <div class="card" style="margin-top:20px;">
+    <h3 style="margin-bottom:10px;">How to use</h3>
+    <ul style="color:var(--muted);font-size:0.85rem;line-height:1.8;padding-left:16px;">
+      <li>Share <strong>http://&lt;server-ip&gt;:7860/</strong> with annotators</li>
+      <li>Each annotator enters a unique name and answers YES/NO per question</li>
+      <li>Progress is auto-saved — annotators can resume any time</li>
+      <li>Keyboard shortcuts: <kbd style="background:var(--border);border-radius:3px;padding:1px 5px;">Y</kbd> / <kbd style="background:var(--border);border-radius:3px;padding:1px 5px;">N</kbd> to answer, <kbd style="background:var(--border);border-radius:3px;padding:1px 5px;">←</kbd> <kbd style="background:var(--border);border-radius:3px;padding:1px 5px;">→</kbd> to navigate</li>
+      <li>Click any frame to zoom in (lightbox)</li>
+    </ul>
+  </div>
+
+</div>
+{% endblock %}

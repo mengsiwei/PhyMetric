@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Caption Review</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bg"></div>
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">PhyMetric</div>
+        <h1>Caption QA Review</h1>
+        <p class="subtitle">逐条检查 caption、question_text、answer、dimensions 并可直接编辑。</p>
+      </div>
+      <div class="stats" id="stats">Loading…</div>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <div class="controls">
+          <div class="group">
+            <button id="prevBtn" class="btn">Prev</button>
+            <button id="nextBtn" class="btn">Next</button>
+          </div>
+          <div class="group">
+            <input id="jumpInput" class="input" placeholder="Jump to caption_id" />
+            <button id="jumpBtn" class="btn ghost">Go</button>
+          </div>
+        </div>
+
+        <div id="record" class="card"></div>
+
+        <div class="actions">
+          <button id="addQuestionBtn" class="btn ghost">Add Question</button>
+          <button id="loadFileBtn" class="btn ghost">Load JSONL File</button>
+          <input id="fileInput" type="file" accept=".jsonl,.txt" hidden />
+          <div class="spacer"></div>
+          <button id="downloadBtn" class="btn">Download JSONL</button>
+        </div>
+      </section>
+
+      <aside class="side">
+        <div class="card">
+          <div class="card-title">Quick Tips</div>
+          <ul class="tips">
+            <li>任何输入框修改都会立即写入内存状态。</li>
+            <li>点击 Download JSONL 导出更新后的文件。</li>
+            <li>使用 Go 可以通过 caption_id 快速定位。</li>
+          </ul>
+        </div>
+        <div class="card" id="log">
+          <div class="card-title">Change Log</div>
+          <div class="log-body">No changes yet.</div>
+        </div>
+      </aside>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

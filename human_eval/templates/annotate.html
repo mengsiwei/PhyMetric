@@ -1,0 +1,503 @@
+{% extends "base.html" %}
+{% block title %}Annotate [{{ pos+1 }}/{{ total }}] — PhyMetric{% endblock %}
+
+{% block head %}
+<style>
+/* ── media section ─────────────────────────────────────────────────── */
+.media-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.media-tab {
+  padding: 5px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.media-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.media-panel { display: none; }
+.media-panel.active { display: block; }
+
+/* ── carousel ──────────────────────────────────────────────────────── */
+.carousel-wrap {
+  position: relative;
+}
+.carousel-slides {
+  overflow: hidden;
+}
+.carousel-slide {
+  display: none;
+}
+.carousel-slide.active {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.carousel-slide img {
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  max-height: 220px;
+  width: auto;
+  cursor: zoom-in;
+  transition: border-color 0.15s;
+}
+.carousel-slide img:hover { border-color: var(--accent); }
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+.carousel-btn {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s;
+}
+.carousel-btn:hover { background: var(--border); }
+.carousel-btn:disabled { opacity: 0.3; cursor: default; }
+.carousel-dots {
+  display: flex; gap: 6px;
+}
+.carousel-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.carousel-dot.active { background: var(--accent); }
+.slide-label {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* ── grid toggle ───────────────────────────────────────────────────── */
+.grid-view .carousel-slide {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.grid-view .carousel-controls { display: none; }
+.grid-view .slide-label { display: none; }
+
+/* ── video player ──────────────────────────────────────────────────── */
+video {
+  width: 100%;
+  border-radius: 8px;
+  background: #000;
+  max-height: 360px;
+}
+
+/* ── knowledge base ────────────────────────────────────────────────── */
+.kb-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 7px 14px;
+  color: var(--muted);
+  font-size: 0.83rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0;
+}
+.kb-toggle:hover { color: var(--text); border-color: var(--accent); }
+.kb-toggle .arrow { transition: transform 0.2s; display: inline-block; }
+.kb-toggle.open .arrow { transform: rotate(90deg); }
+.kb-body {
+  display: none;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+.kb-body.open { display: block; }
+.kb-section { margin-bottom: 12px; }
+.kb-section h4 {
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.kb-section p, .kb-section li { color: var(--text); }
+.kb-section ul { padding-left: 16px; margin: 4px 0; }
+.kb-section li { margin-bottom: 2px; }
+.kb-hint {
+  display: inline-block;
+  background: #1e2a44;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin: 3px 3px 3px 0;
+  color: #7ab0f0;
+  font-size: 0.82rem;
+}
+.kb-seq {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+.kb-seq-item {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 0.8rem;
+}
+.kb-seq-item .seq-label {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 3px;
+}
+
+/* ── answer buttons ────────────────────────────────────────────────── */
+.answer-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: 20px 0 12px;
+}
+.btn-yes, .btn-no {
+  flex: 1;
+  max-width: 200px;
+  padding: 18px 0;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  letter-spacing: 0.05em;
+}
+.btn-yes { background: var(--yes); color: #fff; }
+.btn-yes:hover, .btn-yes.active { background: var(--yes-h); box-shadow: 0 0 0 3px rgba(46,168,78,0.35); }
+.btn-no  { background: var(--no);  color: #fff; }
+.btn-no:hover,  .btn-no.active  { background: var(--no-h);  box-shadow: 0 0 0 3px rgba(217,64,64,0.35); }
+.btn-yes:active, .btn-no:active { transform: scale(0.96); }
+.key-hint { text-align: center; color: var(--muted); font-size: 0.78rem; margin-top: 4px; }
+.key-hint kbd { background: var(--border); border-radius: 3px; padding: 1px 5px; font-size: 0.75rem; font-family: monospace; }
+
+/* ── answered border ───────────────────────────────────────────────── */
+.answered-yes { border-left: 4px solid var(--yes) !important; }
+.answered-no  { border-left: 4px solid var(--no)  !important; }
+
+/* ── lightbox ──────────────────────────────────────────────────────── */
+#lightbox {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.88);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+#lightbox.open { display: flex; }
+#lightbox img { max-width: 92vw; max-height: 92vh; border-radius: 8px; }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="container" style="max-width:820px;">
+
+  <!-- Progress -->
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+    <div class="progress-bar-wrap" style="flex:1;">
+      <div class="progress-bar-fill" style="width:{{ (answered / total * 100)|round(1) }}%"></div>
+    </div>
+    <span style="color:var(--muted);font-size:0.85rem;white-space:nowrap;">{{ answered }} / {{ total }}</span>
+  </div>
+
+  <!-- Scene info -->
+  <div class="card" style="margin-bottom:10px;">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:8px;">
+      <div>
+        <span class="tag tag-{{ q.difficulty }}" style="margin-right:5px;">{{ q.difficulty }}</span>
+        {% for d in q.dimensions %}<span class="tag tag-dim">{{ d }}</span>{% endfor %}
+      </div>
+      <span style="color:var(--muted);font-size:0.8rem;white-space:nowrap;">Scene {{ q.scene_idx + 1 }} · Q{{ q.q_id }}</span>
+    </div>
+    <div style="color:var(--muted);font-size:0.78rem;margin-bottom:3px;">{{ q.phenomenon | replace('_', ' ') }}</div>
+    <div style="font-size:0.95rem;line-height:1.5;">{{ q.scene_caption }}</div>
+  </div>
+
+  <!-- Media (frames + video) -->
+  <div class="card" style="margin-bottom:10px;">
+
+    {% set has_slides = slides | selectattr('tokens') | list | length > 0 %}
+    {% set has_video  = video_token is not none %}
+
+    <!-- Tab bar (only if both available) -->
+    {% if has_slides and has_video %}
+    <div class="media-tabs" id="mediaTabs">
+      <button class="media-tab active" onclick="switchTab('frames', this)">🖼 Frames</button>
+      <button class="media-tab"        onclick="switchTab('video',  this)">▶ Video</button>
+      {% if has_slides %}
+      <button class="media-tab" style="margin-left:auto;" onclick="toggleGrid(this)">⊞ Grid</button>
+      {% endif %}
+    </div>
+    {% elif has_slides %}
+    <div class="media-tabs">
+      <span style="color:var(--muted);font-size:0.82rem;font-weight:600;">🖼 Frames</span>
+      <button class="media-tab" style="margin-left:auto;" onclick="toggleGrid(this)">⊞ Grid</button>
+    </div>
+    {% elif has_video %}
+    <div class="media-tabs">
+      <span style="color:var(--muted);font-size:0.82rem;font-weight:600;">▶ Video</span>
+    </div>
+    {% endif %}
+
+    <!-- Frames panel -->
+    <div class="media-panel {% if has_slides %}active{% endif %}" id="panel-frames">
+      {% if has_slides %}
+      <div class="carousel-wrap" id="carouselWrap">
+        <div class="carousel-slides" id="carouselSlides">
+          {% for slide in slides %}
+          {% if slide.tokens %}
+          <div class="carousel-slide {% if loop.first %}active{% endif %}" data-index="{{ loop.index0 }}">
+            <div class="slide-label">{{ slide.label }}</div>
+            {% for token in slide.tokens %}
+            <img src="/frame/{{ token }}" onclick="openLightbox(this)">
+            {% endfor %}
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="carousel-controls" id="carouselControls">
+          <button class="carousel-btn" id="btnPrev" onclick="carouselMove(-1)" disabled>‹</button>
+          <div class="carousel-dots" id="carouselDots">
+            {% set ns = namespace(dot=0) %}
+            {% for slide in slides %}{% if slide.tokens %}
+            <div class="carousel-dot {% if ns.dot == 0 %}active{% endif %}"
+                 onclick="carouselGo({{ ns.dot }})" title="{{ slide.label }}"></div>
+            {% set ns.dot = ns.dot + 1 %}
+            {% endif %}{% endfor %}
+          </div>
+          <button class="carousel-btn" id="btnNext" onclick="carouselMove(1)">›</button>
+        </div>
+      </div>
+      {% else %}
+      <p style="text-align:center;color:var(--muted);padding:24px 0;font-size:0.9rem;">
+        No frames extracted for this scene yet.
+        {% if has_video %}Use the <strong>Video</strong> tab to review.{% endif %}
+      </p>
+      {% endif %}
+    </div>
+
+    <!-- Video panel -->
+    {% if has_video %}
+    <div class="media-panel {% if not has_slides %}active{% endif %}" id="panel-video">
+      <video controls preload="metadata">
+        <source src="/video/{{ video_token }}" type="video/mp4">
+      </video>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <!-- Knowledge base (collapsible) -->
+  {% set kb = q.knowledge_base %}
+  {% if kb %}
+  <div class="card" style="margin-bottom:10px;padding:12px 16px;">
+    <button class="kb-toggle" id="kbToggle" onclick="toggleKB()">
+      <span class="arrow">▶</span>
+      📖 Physics Knowledge Base
+    </button>
+    <div class="kb-body" id="kbBody">
+
+      {% if kb.physical_law %}
+      <div class="kb-section">
+        <h4>Physical Law</h4>
+        <p>{{ kb.physical_law }}</p>
+      </div>
+      {% endif %}
+
+      {% if kb.expected_sequence %}
+      <div class="kb-section">
+        <h4>Expected Sequence</h4>
+        <div class="kb-seq">
+          {% for k, v in kb.expected_sequence.items() %}
+          <div class="kb-seq-item">
+            <div class="seq-label">{{ k | replace('_', ' ') }}</div>
+            {{ v }}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if kb.visual_indicators %}
+      <div class="kb-section">
+        <h4>Visual Indicators of Correct Physics</h4>
+        <ul>{% for v in kb.visual_indicators %}<li>{{ v }}</li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+
+      {% if kb.common_failures %}
+      <div class="kb-section">
+        <h4>Common Generation Failures</h4>
+        <ul>{% for v in kb.common_failures %}<li>{{ v }}</li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+
+      {% if kb.evaluation_hints %}
+      <div class="kb-section">
+        <h4>Evaluation Hints for This Question</h4>
+        {% for dim in q.dimensions %}
+          {% if dim in kb.evaluation_hints %}
+          <div class="kb-hint"><strong>{{ dim }}:</strong> {{ kb.evaluation_hints[dim] }}</div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Question + answer -->
+  <div class="card {% if existing_answer == 'yes' %}answered-yes{% elif existing_answer == 'no' %}answered-no{% endif %}">
+    <p style="font-size:1.1rem;font-weight:600;line-height:1.5;margin-bottom:20px;text-align:center;">
+      {{ q.question_text }}
+    </p>
+    <form method="POST" action="/answer">
+      <input type="hidden" name="pos" value="{{ pos }}">
+      <div class="answer-btns">
+        <button type="submit" name="answer" value="yes"
+                class="btn-yes {% if existing_answer == 'yes' %}active{% endif %}" id="btnYes">
+          ✓ YES
+        </button>
+        <button type="submit" name="answer" value="no"
+                class="btn-no {% if existing_answer == 'no' %}active{% endif %}" id="btnNo">
+          ✗ NO
+        </button>
+      </div>
+    </form>
+    <div class="key-hint">
+      <kbd>Y</kbd> Yes &nbsp;·&nbsp; <kbd>N</kbd> No &nbsp;·&nbsp;
+      <kbd>←</kbd> Prev question &nbsp;·&nbsp; <kbd>→</kbd> Skip &nbsp;·&nbsp;
+      <kbd>A</kbd>/<kbd>D</kbd> Slide frames
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div style="display:flex;gap:8px;justify-content:center;margin-top:8px;">
+    {% if prev_pos is not none %}
+      <a href="/annotate/{{ prev_pos }}" class="btn btn-ghost">← Prev</a>
+    {% endif %}
+    {% if next_pos is not none %}
+      <a href="/annotate/{{ next_pos }}" class="btn btn-ghost">Skip →</a>
+    {% endif %}
+    <a href="/annotate" class="btn btn-ghost">Next Unanswered</a>
+  </div>
+
+</div><!-- /container -->
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightboxImg" src="">
+</div>
+
+<script>
+// ── Carousel ──────────────────────────────────────────────────────────────
+const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+const dots   = Array.from(document.querySelectorAll('.carousel-dot'));
+let current  = 0;
+
+function carouselGo(idx) {
+  if (document.getElementById('carouselWrap')?.classList.contains('grid-view')) return;
+  slides[current]?.classList.remove('active');
+  dots[current]?.classList.remove('active');
+  current = Math.max(0, Math.min(idx, slides.length - 1));
+  slides[current]?.classList.add('active');
+  dots[current]?.classList.add('active');
+  document.getElementById('btnPrev').disabled = current === 0;
+  document.getElementById('btnNext').disabled = current === slides.length - 1;
+}
+
+function carouselMove(dir) { carouselGo(current + dir); }
+
+// ── Grid toggle ───────────────────────────────────────────────────────────
+function toggleGrid(btn) {
+  const wrap = document.getElementById('carouselWrap');
+  if (!wrap) return;
+  const isGrid = wrap.classList.toggle('grid-view');
+  btn.textContent = isGrid ? '◫ Slide' : '⊞ Grid';
+}
+
+// ── Media tab switch ──────────────────────────────────────────────────────
+function switchTab(panel, btn) {
+  document.querySelectorAll('.media-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.media-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  const el = document.getElementById('panel-' + panel);
+  if (el) el.classList.add('active');
+}
+
+// ── Knowledge base toggle ─────────────────────────────────────────────────
+function toggleKB() {
+  const btn  = document.getElementById('kbToggle');
+  const body = document.getElementById('kbBody');
+  if (!btn || !body) return;
+  btn.classList.toggle('open');
+  body.classList.toggle('open');
+}
+
+// ── Lightbox ──────────────────────────────────────────────────────────────
+function openLightbox(img) {
+  document.getElementById('lightboxImg').src = img.src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+
+// ── Keyboard shortcuts ────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT') return;
+  switch (e.key) {
+    case 'y': case 'Y': document.getElementById('btnYes').click(); break;
+    case 'n': case 'N': document.getElementById('btnNo').click();  break;
+    case 'ArrowLeft':  {% if prev_pos is not none %}window.location.href='/annotate/{{ prev_pos }}';{% endif %} break;
+    case 'ArrowRight': {% if next_pos is not none %}window.location.href='/annotate/{{ next_pos }}';{% endif %} break;
+    case 'a': case 'A': carouselMove(-1); break;
+    case 'd': case 'D': carouselMove(+1); break;
+    case 'Escape': closeLightbox(); break;
+  }
+});
+</script>
+{% endblock %}
