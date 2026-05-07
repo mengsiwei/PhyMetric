@@ -1,0 +1,143 @@
+{
+  "Gravity_Earth_scene_21": {
+    "01": {
+      "question_text": "Does the pen fall straight downward after slipping off the ladder?",
+      "dimensions": [
+        "motion",
+        "causal"
+      ],
+      "difficulty": "easy",
+      "frame_indices": [
+        20,
+        60,
+        100
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": false,
+      "reason": "The video depicts a blue bird landing on and then flying away from a railing, which contradicts the premise of a falling pen and shows no vertical downward motion."
+    },
+    "02": {
+      "question_text": "Does the pen bounce upwards after hitting the ground?",
+      "dimensions": [
+        "motion",
+        "interaction"
+      ],
+      "difficulty": "medium",
+      "frame_indices": [
+        100,
+        110
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 1.0,
+      "correct": true,
+      "reason": "The video depicts a bird perched on a railing and does not contain a pen, a ladder, or any falling object hitting the ground."
+    },
+    "03": {
+      "question_text": "Is the pen impacted by any horizontal force during its fall?",
+      "dimensions": [
+        "interaction",
+        "causal"
+      ],
+      "difficulty": "medium",
+      "frame_indices": [
+        20,
+        40
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": true,
+      "reason": "The video shows the pen falling in a straight vertical line without any lateral drift, indicating no horizontal forces are acting on it."
+    },
+    "04": {
+      "question_text": "Does the pen remain intact after hitting the ground?",
+      "dimensions": [
+        "appearance/texture",
+        "interaction"
+      ],
+      "difficulty": "easy",
+      "frame_indices": [
+        105,
+        115
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": false,
+      "reason": "The video depicts a bird perched on a railing and does not show a pen falling or hitting the ground."
+    },
+    "05": {
+      "question_text": "Does the speed of the pen increase as it falls?",
+      "dimensions": [
+        "motion",
+        "causal"
+      ],
+      "difficulty": "hard",
+      "frame_indices": [
+        20,
+        40,
+        60
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 1.0,
+      "correct": false,
+      "reason": "The video depicts a blue bird landing on a railing, not a falling pen, so the premise of the question is incorrect."
+    },
+    "06": {
+      "question_text": "Does the pen trigger any other objects to fall as it descends?",
+      "dimensions": [
+        "interaction",
+        "causal"
+      ],
+      "difficulty": "hard",
+      "frame_indices": [
+        60,
+        80
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 1.0,
+      "correct": true,
+      "reason": "The video shows a blue bird flying past the ladder, but the pen itself is not visible in the provided frames, and there is no evidence of it interacting with or causing other objects to fall."
+    },
+    "07": {
+      "question_text": "Is the pen blue in color throughout?",
+      "dimensions": [
+        "appearance/texture",
+        "object"
+      ],
+      "difficulty": "easy",
+      "frame_indices": [
+        0,
+        20,
+        40
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 1.0,
+      "correct": false,
+      "reason": "The video depicts a blue bird, not a pen, and the bird's coloration changes from bright blue to white on its belly as it moves."
+    },
+    "08": {
+      "question_text": "Does the pen vanish before reaching the ground?",
+      "dimensions": [
+        "existence",
+        "causal"
+      ],
+      "difficulty": "hard",
+      "frame_indices": [
+        100,
+        115
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": true,
+      "reason": "The video frames show a bird perched on a railing, which contradicts the scene caption describing a falling pen, but the bird remains visible throughout the sequence and does not vanish."
+    }
+  }
+}

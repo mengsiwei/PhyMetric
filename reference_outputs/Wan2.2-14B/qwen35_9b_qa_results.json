@@ -1,0 +1,143 @@
+{
+  "Gravity_Earth_scene_21": {
+    "01": {
+      "question_text": "Does the pen fall straight downward after slipping off the ladder?",
+      "dimensions": [
+        "motion",
+        "causal"
+      ],
+      "difficulty": "easy",
+      "frame_indices": [
+        20,
+        60,
+        100
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": false,
+      "reason": "The video depicts a blue bird on a ladder, not a pen falling, and the bird remains stationary on the ladder rungs rather than falling straight downward."
+    },
+    "02": {
+      "question_text": "Does the pen bounce upwards after hitting the ground?",
+      "dimensions": [
+        "motion",
+        "interaction"
+      ],
+      "difficulty": "medium",
+      "frame_indices": [
+        100,
+        110
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": true,
+      "reason": "The video depicts a blue bird standing still on a black background, which contradicts the description of a falling pen and shows no ground impact or bouncing event."
+    },
+    "03": {
+      "question_text": "Is the pen impacted by any horizontal force during its fall?",
+      "dimensions": [
+        "interaction",
+        "causal"
+      ],
+      "difficulty": "medium",
+      "frame_indices": [
+        20,
+        40
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": true,
+      "reason": "The bird falls in a straight vertical line without any lateral drift, indicating no horizontal forces are acting on it."
+    },
+    "04": {
+      "question_text": "Does the pen remain intact after hitting the ground?",
+      "dimensions": [
+        "appearance/texture",
+        "interaction"
+      ],
+      "difficulty": "easy",
+      "frame_indices": [
+        105,
+        115
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": false,
+      "reason": "The video shows the pen falling and accelerating, but it never actually hits the ground or shows any post-impact state to confirm its integrity."
+    },
+    "05": {
+      "question_text": "Does the speed of the pen increase as it falls?",
+      "dimensions": [
+        "motion",
+        "causal"
+      ],
+      "difficulty": "hard",
+      "frame_indices": [
+        20,
+        40,
+        60
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": false,
+      "reason": "The video depicts a blue bird sliding down a ladder, not a pen falling under gravity, and the bird's motion does not show the accelerating speed characteristic of free fall."
+    },
+    "06": {
+      "question_text": "Does the pen trigger any other objects to fall as it descends?",
+      "dimensions": [
+        "interaction",
+        "causal"
+      ],
+      "difficulty": "hard",
+      "frame_indices": [
+        60,
+        80
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 1.0,
+      "correct": true,
+      "reason": "The video depicts a bird on a ladder, not a falling pen, and no objects are shown falling as a result of any interaction."
+    },
+    "07": {
+      "question_text": "Is the pen blue in color throughout?",
+      "dimensions": [
+        "appearance/texture",
+        "object"
+      ],
+      "difficulty": "easy",
+      "frame_indices": [
+        0,
+        20,
+        40
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": false,
+      "reason": "The object shown in the video is a blue bird, not a pen, so the premise of the question is incorrect."
+    },
+    "08": {
+      "question_text": "Does the pen vanish before reaching the ground?",
+      "dimensions": [
+        "existence",
+        "causal"
+      ],
+      "difficulty": "hard",
+      "frame_indices": [
+        100,
+        115
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": true,
+      "reason": "The pen remains visible in the frame throughout the sequence and does not vanish before reaching the ground."
+    }
+  }
+}

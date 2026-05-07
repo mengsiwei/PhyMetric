@@ -1,0 +1,143 @@
+{
+  "Gravity_Earth_scene_21": {
+    "03": {
+      "question_text": "Is the pen impacted by any horizontal force during its fall?",
+      "dimensions": [
+        "interaction",
+        "causal"
+      ],
+      "difficulty": "medium",
+      "frame_indices": [
+        20,
+        40
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": true,
+      "reason": "Across the shown frames the pen remains aligned with the ladder and shows no visible sideways drift, so there is no evidence of a horizontal force acting during the fall."
+    },
+    "02": {
+      "question_text": "Does the pen bounce upwards after hitting the ground?",
+      "dimensions": [
+        "motion",
+        "interaction"
+      ],
+      "difficulty": "medium",
+      "frame_indices": [
+        100,
+        110
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": true,
+      "reason": "In the shown late-stage frames the pen remains on the ladder/rung area and no ground impact or subsequent upward rebound is visible."
+    },
+    "01": {
+      "question_text": "Does the pen fall straight downward after slipping off the ladder?",
+      "dimensions": [
+        "motion",
+        "causal"
+      ],
+      "difficulty": "easy",
+      "frame_indices": [
+        20,
+        60,
+        100
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 0.98,
+      "correct": false,
+      "reason": "Across the sampled frames the pen remains aligned with the slanted ladder rung and shifts laterally rather than dropping in a straight vertical path below its release point."
+    },
+    "04": {
+      "question_text": "Does the pen remain intact after hitting the ground?",
+      "dimensions": [
+        "appearance/texture",
+        "interaction"
+      ],
+      "difficulty": "easy",
+      "frame_indices": [
+        105,
+        115
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 0.18,
+      "correct": false,
+      "reason": "The provided frames only show the pen resting/sliding on the ladder and do not include any visible ground impact or post-impact state, so there is no evidence that it remains intact after hitting the ground."
+    },
+    "07": {
+      "question_text": "Is the pen blue in color throughout?",
+      "dimensions": [
+        "appearance/texture",
+        "object"
+      ],
+      "difficulty": "easy",
+      "frame_indices": [
+        0,
+        20,
+        40
+      ],
+      "ground_truth": "yes",
+      "pred": "yes",
+      "confidence": 0.99,
+      "correct": true,
+      "reason": "In all shown frames, the pen remains consistently blue with no visible color change."
+    },
+    "06": {
+      "question_text": "Does the pen trigger any other objects to fall as it descends?",
+      "dimensions": [
+        "interaction",
+        "causal"
+      ],
+      "difficulty": "hard",
+      "frame_indices": [
+        60,
+        80
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 0.98,
+      "correct": true,
+      "reason": "Across the shown frames, only the blue pen slides/falls relative to the ladder and no other visible object is disturbed or begins falling."
+    },
+    "08": {
+      "question_text": "Does the pen vanish before reaching the ground?",
+      "dimensions": [
+        "existence",
+        "causal"
+      ],
+      "difficulty": "hard",
+      "frame_indices": [
+        100,
+        115
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": true,
+      "reason": "In the shown late-stage frames the blue pen remains clearly visible and continuous in the scene, with no evidence that it disappears before any ground impact."
+    },
+    "05": {
+      "question_text": "Does the speed of the pen increase as it falls?",
+      "dimensions": [
+        "motion",
+        "causal"
+      ],
+      "difficulty": "hard",
+      "frame_indices": [
+        20,
+        40,
+        60
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": false,
+      "reason": "Across the sampled frames the pen appears to move only slightly and by roughly similar amounts along the ladder rather than showing increasingly larger downward displacements consistent with gravitational acceleration."
+    }
+  }
+}

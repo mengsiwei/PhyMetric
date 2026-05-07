@@ -1,0 +1,143 @@
+{
+  "Gravity_Earth_scene_21": {
+    "01": {
+      "question_text": "Does the pen fall straight downward after slipping off the ladder?",
+      "dimensions": [
+        "motion",
+        "causal"
+      ],
+      "difficulty": "easy",
+      "frame_indices": [
+        20,
+        60,
+        100
+      ],
+      "ground_truth": "yes",
+      "pred": "yes",
+      "confidence": 0.95,
+      "correct": true,
+      "reason": "The pen maintains a straight vertical trajectory directly below its release point without any lateral drift, consistent with the expected physics of a dropped object."
+    },
+    "02": {
+      "question_text": "Does the pen bounce upwards after hitting the ground?",
+      "dimensions": [
+        "motion",
+        "interaction"
+      ],
+      "difficulty": "medium",
+      "frame_indices": [
+        100,
+        110
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": true,
+      "reason": "The provided frames show a stationary ladder with no pen visible, and the scene caption describes a fall that ends in impact, not a bounce."
+    },
+    "03": {
+      "question_text": "Is the pen impacted by any horizontal force during its fall?",
+      "dimensions": [
+        "interaction",
+        "causal"
+      ],
+      "difficulty": "medium",
+      "frame_indices": [
+        20,
+        40
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": true,
+      "reason": "The pen falls in a straight vertical line directly below its release point, indicating no horizontal forces are acting on it."
+    },
+    "04": {
+      "question_text": "Does the pen remain intact after hitting the ground?",
+      "dimensions": [
+        "appearance/texture",
+        "interaction"
+      ],
+      "difficulty": "easy",
+      "frame_indices": [
+        105,
+        115
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": false,
+      "reason": "The video frames show the pen still in mid-air and have not yet reached the ground, so it is impossible to determine if it remains intact after impact."
+    },
+    "05": {
+      "question_text": "Does the speed of the pen increase as it falls?",
+      "dimensions": [
+        "motion",
+        "causal"
+      ],
+      "difficulty": "hard",
+      "frame_indices": [
+        20,
+        40,
+        60
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": false,
+      "reason": "The pen remains stationary in the air for the entire duration of the provided frames, failing to exhibit any motion or acceleration due to gravity."
+    },
+    "06": {
+      "question_text": "Does the pen trigger any other objects to fall as it descends?",
+      "dimensions": [
+        "interaction",
+        "causal"
+      ],
+      "difficulty": "hard",
+      "frame_indices": [
+        60,
+        80
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 1.0,
+      "correct": true,
+      "reason": "The video depicts a pen falling freely under gravity without interacting with or displacing any other objects."
+    },
+    "07": {
+      "question_text": "Is the pen blue in color throughout?",
+      "dimensions": [
+        "appearance/texture",
+        "object"
+      ],
+      "difficulty": "easy",
+      "frame_indices": [
+        0,
+        20,
+        40
+      ],
+      "ground_truth": "yes",
+      "pred": "yes",
+      "confidence": 0.99,
+      "correct": true,
+      "reason": "The pen is consistently blue in all provided frames, maintaining its color and structural integrity throughout the fall."
+    },
+    "08": {
+      "question_text": "Does the pen vanish before reaching the ground?",
+      "dimensions": [
+        "existence",
+        "causal"
+      ],
+      "difficulty": "hard",
+      "frame_indices": [
+        100,
+        115
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 0.95,
+      "correct": true,
+      "reason": "The pen remains visible as a distinct object in the frame throughout the sequence and does not vanish before reaching the ground."
+    }
+  }
+}

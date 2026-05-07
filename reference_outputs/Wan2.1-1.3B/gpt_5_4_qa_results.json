@@ -1,0 +1,143 @@
+{
+  "Gravity_Earth_scene_21": {
+    "01": {
+      "question_text": "Does the pen fall straight downward after slipping off the ladder?",
+      "dimensions": [
+        "motion",
+        "causal"
+      ],
+      "difficulty": "easy",
+      "frame_indices": [
+        20,
+        60,
+        100
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 0.99,
+      "correct": false,
+      "reason": "The frames show a blue bird moving around the ladder rather than a pen falling in a straight vertical path, so the depicted motion does not match a pen slipping downward."
+    },
+    "02": {
+      "question_text": "Does the pen bounce upwards after hitting the ground?",
+      "dimensions": [
+        "motion",
+        "interaction"
+      ],
+      "difficulty": "medium",
+      "frame_indices": [
+        100,
+        110
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 0.99,
+      "correct": true,
+      "reason": "The frames show a blue bird perched on a ladder-like bar rather than a falling pen, and there is no visible ground impact or upward bounce event."
+    },
+    "03": {
+      "question_text": "Is the pen impacted by any horizontal force during its fall?",
+      "dimensions": [
+        "interaction",
+        "causal"
+      ],
+      "difficulty": "medium",
+      "frame_indices": [
+        20,
+        40
+      ],
+      "ground_truth": "no",
+      "pred": "yes",
+      "confidence": 0.99,
+      "correct": false,
+      "reason": "The frames show a bird moving horizontally across a ladder rung rather than a pen falling straight down, so the depicted motion clearly includes strong horizontal motion inconsistent with gravity-only fall."
+    },
+    "04": {
+      "question_text": "Does the pen remain intact after hitting the ground?",
+      "dimensions": [
+        "appearance/texture",
+        "interaction"
+      ],
+      "difficulty": "easy",
+      "frame_indices": [
+        105,
+        115
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 0.99,
+      "correct": false,
+      "reason": "The frames do not show a falling pen or any ground impact at all—instead they depict a blue bird perched on a rail—so the claimed post-impact intactness of a pen is not present."
+    },
+    "06": {
+      "question_text": "Does the pen trigger any other objects to fall as it descends?",
+      "dimensions": [
+        "interaction",
+        "causal"
+      ],
+      "difficulty": "hard",
+      "frame_indices": [
+        60,
+        80
+      ],
+      "ground_truth": "no",
+      "pred": "no",
+      "confidence": 0.99,
+      "correct": true,
+      "reason": "The shown frames do not depict a falling pen at all—only a blue bird moving near a ladder rung—so there is no evidence of the pen causing any other objects to fall."
+    },
+    "05": {
+      "question_text": "Does the speed of the pen increase as it falls?",
+      "dimensions": [
+        "motion",
+        "causal"
+      ],
+      "difficulty": "hard",
+      "frame_indices": [
+        20,
+        40,
+        60
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 0.98,
+      "correct": false,
+      "reason": "The frames do not show a pen falling at all—instead they show a bird moving across a ladder rung—so there is no visible evidence of a pen’s downward speed increasing under gravity."
+    },
+    "07": {
+      "question_text": "Is the pen blue in color throughout?",
+      "dimensions": [
+        "appearance/texture",
+        "object"
+      ],
+      "difficulty": "easy",
+      "frame_indices": [
+        0,
+        20,
+        40
+      ],
+      "ground_truth": "yes",
+      "pred": "no",
+      "confidence": 0.99,
+      "correct": false,
+      "reason": "The frames show a blue bird perched on a ladder rung rather than a pen, so there is no blue pen visible throughout the video."
+    },
+    "08": {
+      "question_text": "Does the pen vanish before reaching the ground?",
+      "dimensions": [
+        "existence",
+        "causal"
+      ],
+      "difficulty": "hard",
+      "frame_indices": [
+        100,
+        115
+      ],
+      "ground_truth": "no",
+      "pred": "yes",
+      "confidence": 0.99,
+      "correct": false,
+      "reason": "The frames show a bird-like object perched on a ladder rung rather than a falling pen, so the pen is not visible and effectively vanishes before any ground impact is shown."
+    }
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "metadata": {
+    "version": "v3",
+    "fps": 30,
+    "duration_seconds": 4,
+    "total_frames": 120,
+    "dimensions": [
+      "existence",
+      "size",
+      "appearance/texture",
+      "shape",
+      "motion",
+      "number",
+      "direction",
+      "material",
+      "object",
+      "spatial",
+      "interaction",
+      "causal"
+    ],
+    "difficulty_levels": [
+      "easy",
+      "medium",
+      "hard"
+    ],
+    "total_categories": 1,
+    "total_scenes": 1,
+    "total_questions": 8,
+    "note": "v3: 50 categories × 20-30 scenes × 8 questions. Answer balance: 4 positive + 4 negative per scene. Scenes migrated from v2 have migrated_ prefix in scene_id."
+  },
+  "categories": {
+    "Gravity_Earth": {
+      "category_metadata": {
+        "description": "Object released and falls under Earth's gravitational acceleration (9.8 m/s²).",
+        "physical_principle": "Newton's second law with constant downward acceleration g = 9.8 m/s². Velocity increases linearly; distance grows as ½gt².",
+        "physics_domain": "mechanics",
+        "object_pool": [
+          "stone",
+          "apple",
+          "metal key",
+          "tennis ball",
+          "book",
+          "pen",
+          "coin",
+          "glass marble",
+          "leaf",
+          "feather",
+          "hammer",
+          "egg",
+          "orange",
+          "plastic cup",
+          "wooden block",
+          "bolt",
+          "rubber eraser",
+          "walnut",
+          "rubber ball",
+          "ceramic mug"
+        ],
+        "environment_pool": [
+          "table edge",
+          "held by a hand",
+          "tree branch",
+          "shelf",
+          "window ledge",
+          "rooftop",
+          "ladder rung",
+          "cliff edge"
+        ],
+        "key_dimensions": [
+          "motion",
+          "direction",
+          "spatial",
+          "causal"
+        ]
+      },
+      "scenes": {
+        "scene_21": {
+          "scene_name": "Pen Falls from Ladder",
+          "scene_caption": "A pen slips from the top rung of a ladder and accelerates downward under gravity until it strikes the ground.",
+          "generation_prompt": "A blue pen is resting on the top rung of a ladder. It slips off, falling under gravity until it impacts the ground below, observed in detail including its increasing speed due to gravity.",
+          "causal_chain": {
+            "initial_state": "A blue pen is precariously balanced on the top rung of a ladder.",
+            "process": "The pen slips off the rung and falls due to gravity, accelerating as it descends.",
+            "final_state": "The pen impacts the ground with a noticeable increase in speed before stopping."
+          },
+          "questions": [
+            {
+              "id": "01",
+              "question_text": "Does the pen fall straight downward after slipping off the ladder?",
+              "dimensions": [
+                "motion",
+                "causal"
+              ],
+              "difficulty": "easy",
+              "frame_indices": [
+                20,
+                60,
+                100
+              ],
+              "answer": 1
+            },
+            {
+              "id": "02",
+              "question_text": "Does the pen bounce upwards after hitting the ground?",
+              "dimensions": [
+                "motion",
+                "interaction"
+              ],
+              "difficulty": "medium",
+              "frame_indices": [
+                100,
+                110
+              ],
+              "answer": 0
+            },
+            {
+              "id": "03",
+              "question_text": "Is the pen impacted by any horizontal force during its fall?",
+              "dimensions": [
+                "interaction",
+                "causal"
+              ],
+              "difficulty": "medium",
+              "frame_indices": [
+                20,
+                40
+              ],
+              "answer": 0
+            },
+            {
+              "id": "04",
+              "question_text": "Does the pen remain intact after hitting the ground?",
+              "dimensions": [
+                "appearance/texture",
+                "interaction"
+              ],
+              "difficulty": "easy",
+              "frame_indices": [
+                105,
+                115
+              ],
+              "answer": 1
+            },
+            {
+              "id": "05",
+              "question_text": "Does the speed of the pen increase as it falls?",
+              "dimensions": [
+                "motion",
+                "causal"
+              ],
+              "difficulty": "hard",
+              "frame_indices": [
+                20,
+                40,
+                60
+              ],
+              "answer": 1
+            },
+            {
+              "id": "06",
+              "question_text": "Does the pen trigger any other objects to fall as it descends?",
+              "dimensions": [
+                "interaction",
+                "causal"
+              ],
+              "difficulty": "hard",
+              "frame_indices": [
+                60,
+                80
+              ],
+              "answer": 0
+            },
+            {
+              "id": "07",
+              "question_text": "Is the pen blue in color throughout?",
+              "dimensions": [
+                "appearance/texture",
+                "object"
+              ],
+              "difficulty": "easy",
+              "frame_indices": [
+                0,
+                20,
+                40
+              ],
+              "answer": 1
+            },
+            {
+              "id": "08",
+              "question_text": "Does the pen vanish before reaching the ground?",
+              "dimensions": [
+                "existence",
+                "causal"
+              ],
+              "difficulty": "hard",
+              "frame_indices": [
+                100,
+                115
+              ],
+              "answer": 0
+            }
+          ]
+        }
+      }
+    }
+  }
+}
