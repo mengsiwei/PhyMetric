@@ -14,7 +14,9 @@ import argparse
 import base64
 import collections
 import json
+import re
 from pathlib import Path
+from urllib.parse import quote
 
 HERE = Path(__file__).resolve().parent
 
@@ -192,6 +194,27 @@ FRAME_FILES = {
 }
 
 
+def embed_favicon(paper_dir: Path) -> str:
+    """Inline figures_neurips/duck.svg as the site icon.
+
+    The duck is the buoyancy case study's own illustration, so the tab icon is a
+    figure from the paper rather than a new mark. The file ships with iconfont
+    editor attributes and a fixed 200x200 size; both are stripped so the glyph
+    scales from its viewBox and the data URI stays small.
+    """
+    src = paper_dir / "figures_neurips/duck.svg"
+    if not src.exists():
+        raise SystemExit(f"missing site icon: {src}")
+    svg = src.read_text()
+    svg = re.sub(r"<\?xml.*?\?>|<!DOCTYPE.*?>", "", svg, flags=re.S)
+    svg = re.sub(r'\s(?:t|class|p-id|version|xmlns:xlink|width|height)="[^"]*"', "", svg)
+    svg = re.sub(r"\s+", " ", svg).strip()
+    if "viewBox" not in svg:
+        raise SystemExit("duck.svg lost its viewBox; it would not scale as an icon")
+    # Percent-encoding beats base64 for SVG: smaller, and the markup stays legible.
+    return "data:image/svg+xml," + quote(svg, safe="/:;=,@ ")
+
+
 def embed_frames(paper_dir: Path) -> dict:
     """Inline the case frames as data URIs so the page is self-contained."""
     out, missing = {}, []
@@ -262,7 +285,10 @@ def main() -> None:
             raise SystemExit(f"template is missing the {needle} placeholder")
         html = html.replace(needle, json.dumps(payload, separators=(",", ":")))
     for key, val in [("SCENES", f"{t['scenes']:,}"), ("QUESTIONS", f"{t['questions']:,}"),
-                     ("CATEGORIES", str(t["categories"])), ("DOMAINS", str(t["domains"]))]:
+                     ("CATEGORIES", str(t["categories"])), ("DOMAINS", str(t["domains"])),
+                     ("FAVICON", embed_favicon(args.paper))]:
+        if f"__{key}__" not in html:
+            raise SystemExit(f"template is missing the __{key}__ placeholder")
         html = html.replace(f"__{key}__", val)
     args.out.write_text(html)
 
