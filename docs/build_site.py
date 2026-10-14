@@ -73,12 +73,16 @@ def build_taxonomy(src: Path) -> dict:
 
 # Abstract, results and case studies are transcribed from NeurIPS2026/ so the page
 # and the paper cannot disagree. PAPER_DIR points at that source tree.
-ABSTRACT = (
+# Two paragraphs, broken at the abstract's own pivot: the gap, then the contribution.
+# The text is verbatim from the paper; only the paragraph break is ours.
+ABSTRACT = [
     "Text-to-video (T2V) generation models can produce visually realistic videos that "
     "nevertheless violate the physical consequences implied by the prompt and scene. "
     "Existing benchmarks largely rely on holistic plausibility scores or broad quality "
     "dimensions, leaving it unclear which physical behavior is being tested and why a "
-    "model fails. We introduce PhyMetric, a scene-level diagnostic benchmark that recasts "
+    "model fails.",
+
+    "We introduce PhyMetric, a scene-level diagnostic benchmark that recasts "
     "physical plausibility evaluation as verifiable, scene-grounded question answering. "
     "PhyMetric contains 1,115 scenes spanning 50 physical categories across six domains, "
     "paired with 8,920 answer-balanced binary questions over 12 evaluation dimensions. "
@@ -87,8 +91,8 @@ ABSTRACT = (
     "signatures, and common failure modes. At evaluation time, a vision-language model "
     "(VLM) judge answers each question from question-aware sampled frames conditioned on "
     "the prior, and correctness is hierarchically aggregated into scene, dimension, "
-    "physical category, and model scores."
-)
+    "physical category, and model scores.",
+]
 
 # Table 2 (full benchmark) and Table 3 (100-scene controlled subset).
 RESULTS = {

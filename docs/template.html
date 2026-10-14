@@ -144,7 +144,11 @@ a{color:var(--accent)}
 .abs .wrap{padding-block:clamp(32px,5vw,52px);display:grid;
   grid-template-columns:150px 1fr;gap:28px}
 @media (max-width:760px){.abs .wrap{grid-template-columns:1fr;gap:12px}}
-.abs p{margin:0;font-size:15.5px;line-height:1.72;max-width:70ch;color:var(--ink-2)}
+/* Two justified columns of running text. Justification needs hyphenation to avoid
+   rivers at this measure, which is why the container carries lang="en". */
+.abs #abstract-text{display:grid;gap:14px}
+.abs #abstract-text p{margin:0;font-size:15.5px;line-height:1.72;max-width:70ch;
+  color:var(--ink-2);text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 .abs p strong{color:var(--ink)}
 
 /* ---------- cases ---------- */
@@ -336,7 +340,7 @@ footer .wrap{padding-block:22px;font-size:12.5px;color:var(--ink-3);
 <section class="abs" id="abstract">
   <div class="wrap">
     <p class="eyebrow">Abstract</p>
-    <p id="abstract-text"></p>
+    <div id="abstract-text" lang="en"></div>
   </div>
 </section>
 
@@ -424,7 +428,8 @@ const esc = s => String(s).replace(/[&<>"]/g, c =>
   ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 /* ---- abstract ---- */
-document.getElementById('abstract-text').textContent = ABSTRACT;
+document.getElementById('abstract-text').innerHTML =
+  ABSTRACT.map(p => `<p>${esc(p)}</p>`).join('');
 
 /* ---- case studies ---- */
 let activeCase = CASES[0].id;
