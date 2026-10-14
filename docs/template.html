@@ -2,50 +2,69 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600;700&display=swap">
 
 <style>
 /* Layout: an instrument readout — compact masthead, the protocol shown once on a
    real scene, then the taxonomy as a browsable grid against a sticky detail column.
-   Page is graphite throughout; all hue is spent on the six physics domains. */
+   Page is graphite throughout; all hue is spent on the six physics domains.
+
+   Color: the paper's own figure palette. Each domain carries two tokens — a FILL,
+   which is the exact hex the figures use (mechanics #6B8ACE, fluid #A1CCAB,
+   material #EFB983, thermal #EFA49F, chemistry #B0D9E1, electromagnetism #A68DD4),
+   and an INK, the same hue shaded until it clears 4.5:1 on the page background.
+   Fills carry areas, inks carry text and rules. Dark mode inverts the pair: the
+   figure hex becomes the ink and the shaded value becomes the fill. Accent is the
+   paper's WanBlue family; neutrals are greys biased toward it. */
 :root {
-  --bg:#fbfcfd; --surface:#ffffff; --surface-2:#f2f5f7; --surface-3:#e8edf1;
-  --ink:#10161a; --ink-2:#4b545b; --ink-3:#7c8790;
-  --line:#dce3e9; --line-2:#c6d0d8;
-  --accent:#0d7d8a; --accent-ink:#ffffff; --accent-soft:#e3f2f4;
-  --yes:#2f7d4f; --no:#a63d2f;
-  --d-mechanics:#4255c4; --d-fluid:#1189c4; --d-material:#9a6a12;
-  --d-thermal:#b8402f; --d-chemistry:#7c3f9e; --d-electromagnetism:#3c7a34;
+  --bg:#fafbfd; --surface:#ffffff; --surface-2:#f1f4f9; --surface-3:#e4eaf2;
+  --ink:#0e141b; --ink-2:#49525c; --ink-3:#656e79;
+  --line:#dde3ec; --line-2:#c7d1de;
+  --accent:#2a5fb4; --accent-ink:#ffffff; --accent-soft:#e6eeff;
+  --yes:#1b7a43; --no:#a8333f;
+  --easy:#5ad8a6; --medium:#f6bd16; --hard:#e86452;
+  --d-mechanics:#546ca2; --d-fluid:#5b7361; --d-material:#866849;
+  --d-thermal:#8f625f; --d-chemistry:#5c7175; --d-electromagnetism:#766497;
+  --d-mechanics-f:#6b8ace; --d-fluid-f:#a1ccab; --d-material-f:#efb983;
+  --d-thermal-f:#efa49f; --d-chemistry-f:#b0d9e1; --d-electromagnetism-f:#a68dd4;
+  /* Serif is reserved for the PhyMetric wordmark; everything else is Helvetica Neue,
+     which resolves on Apple systems and falls back to Helvetica/Arial elsewhere. */
   --font-display:'IBM Plex Serif', Georgia, 'Times New Roman', serif;
-  --font-body:'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-mono:'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-ui:'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', sans-serif;
+  --font-code:ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
   --wrap:1180px; --r:3px;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg:#0c1012; --surface:#141a1d; --surface-2:#1b2326; --surface-3:#242e32;
-    --ink:#eaeff2; --ink-2:#a3aeb5; --ink-3:#77828a;
-    --line:#283237; --line-2:#36434a;
-    --accent:#4ec4d1; --accent-ink:#06282d; --accent-soft:#0f2b30;
-    --yes:#6bbd87; --no:#e38a7b;
-    --d-mechanics:#8698ef; --d-fluid:#5bb9ea; --d-material:#d6a052;
-    --d-thermal:#ef8574; --d-chemistry:#bb94e4; --d-electromagnetism:#86c470;
+    --bg:#0b0e13; --surface:#131820; --surface-2:#1a212b; --surface-3:#232c38;
+    --ink:#e9edf3; --ink-2:#a2abb8; --ink-3:#828b98;
+    --line:#27303c; --line-2:#35414f;
+    --accent:#6c9bfa; --accent-ink:#08121f; --accent-soft:#132339;
+    --yes:#7cc49a; --no:#e08b93;
+    --easy:#5ad8a6; --medium:#f6bd16; --hard:#e86452;
+    --d-mechanics:#6b8ace; --d-fluid:#a1ccab; --d-material:#efb983;
+    --d-thermal:#efa49f; --d-chemistry:#b0d9e1; --d-electromagnetism:#a68dd4;
+    --d-mechanics-f:#51689c; --d-fluid-f:#576e5c; --d-material-f:#806346;
+    --d-thermal-f:#895e5b; --d-chemistry-f:#586c70; --d-electromagnetism-f:#726191;
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg:#0c1012; --surface:#141a1d; --surface-2:#1b2326; --surface-3:#242e32;
-  --ink:#eaeff2; --ink-2:#a3aeb5; --ink-3:#77828a;
-  --line:#283237; --line-2:#36434a;
-  --accent:#4ec4d1; --accent-ink:#06282d; --accent-soft:#0f2b30;
-  --yes:#6bbd87; --no:#e38a7b;
-  --d-mechanics:#8698ef; --d-fluid:#5bb9ea; --d-material:#d6a052;
-  --d-thermal:#ef8574; --d-chemistry:#bb94e4; --d-electromagnetism:#86c470;
+  --bg:#0b0e13; --surface:#131820; --surface-2:#1a212b; --surface-3:#232c38;
+  --ink:#e9edf3; --ink-2:#a2abb8; --ink-3:#828b98;
+  --line:#27303c; --line-2:#35414f;
+  --accent:#6c9bfa; --accent-ink:#08121f; --accent-soft:#132339;
+  --yes:#7cc49a; --no:#e08b93;
+  --easy:#5ad8a6; --medium:#f6bd16; --hard:#e86452;
+  --d-mechanics:#6b8ace; --d-fluid:#a1ccab; --d-material:#efb983;
+  --d-thermal:#efa49f; --d-chemistry:#b0d9e1; --d-electromagnetism:#a68dd4;
+  --d-mechanics-f:#51689c; --d-fluid-f:#576e5c; --d-material-f:#806346;
+  --d-thermal-f:#895e5b; --d-chemistry-f:#586c70; --d-electromagnetism-f:#726191;
 }
 
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-ui);
   font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
 .wrap{max-width:var(--wrap);margin:0 auto;
   padding-left:max(18px,env(safe-area-inset-left,0px));
@@ -53,8 +72,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
 h1,h2,h3{text-wrap:balance;margin:0}
 a{color:var(--accent)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
-.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
-.eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;
+.mono{font-family:var(--font-ui);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--ink-3)}
 
 /* ---------- masthead ---------- */
@@ -62,7 +81,7 @@ a{color:var(--accent)}
 .mast .wrap{display:flex;align-items:center;gap:14px;padding-block:13px;flex-wrap:wrap}
 .mark{font-family:var(--font-display);font-weight:700;font-size:19px;letter-spacing:-.015em}
 .mark span{color:var(--accent)}
-.venue{font-family:var(--font-mono);font-size:11px;letter-spacing:.07em;
+.venue{font-family:var(--font-ui);font-size:11px;letter-spacing:.07em;
   border:1px solid var(--accent);color:var(--accent);border-radius:999px;padding:3px 10px}
 .mast nav{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
 .mast nav a{color:var(--ink-2);text-decoration:none;font-size:13.5px}
@@ -70,7 +89,7 @@ a{color:var(--accent)}
 
 /* ---------- hero ---------- */
 .hero .wrap{padding-block:clamp(34px,6vw,62px)}
-.hero h1{font-family:var(--font-display);font-weight:700;letter-spacing:-.022em;
+.hero h1{font-family:var(--font-ui);font-weight:700;letter-spacing:-.03em;
   font-size:clamp(30px,5.4vw,50px);line-height:1.08;max-width:19ch}
 .lede{margin:17px 0 0;font-size:clamp(16px,2vw,18.5px);color:var(--ink-2);max-width:62ch}
 .byline{margin-top:22px;font-size:13.5px;color:var(--ink-3)}
@@ -89,31 +108,31 @@ a{color:var(--accent)}
 .figs .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding-block:20px;gap:8px}
 .fig{border-left:1px solid var(--line);padding-left:15px}
 .fig:first-child{border-left:0;padding-left:0}
-.fig b{display:block;font-family:var(--font-mono);font-weight:600;
+.fig b{display:block;font-family:var(--font-ui);font-weight:600;
   font-size:clamp(20px,3.1vw,27px);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .fig span{font-size:12px;color:var(--ink-3)}
 
 /* ---------- protocol example ---------- */
 .proto .wrap{padding-block:clamp(38px,6vw,62px)}
 .sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
-.sec-head h2{font-family:var(--font-display);font-size:clamp(21px,3vw,28px);
-  font-weight:600;letter-spacing:-.015em}
+.sec-head h2{font-family:var(--font-ui);font-size:clamp(21px,3vw,28px);
+  font-weight:600;letter-spacing:-.022em}
 .sec-sub{color:var(--ink-2);max-width:66ch;margin:0 0 24px}
 .scene{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);
   overflow:hidden}
 .scene-top{padding:16px 18px;border-bottom:1px solid var(--line);background:var(--surface-2)}
-.scene-id{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-3);
+.scene-id{font-family:var(--font-ui);font-size:11.5px;color:var(--ink-3);
   letter-spacing:.04em}
-.scene-cap{margin:7px 0 0;font-family:var(--font-display);font-size:17px;line-height:1.45}
+.scene-cap{margin:7px 0 0;font-size:16.5px;line-height:1.45;font-weight:500}
 .scene-law{margin:11px 0 0;font-size:13px;color:var(--ink-2);
   border-left:2px solid var(--accent);padding-left:11px}
 .qrow{display:grid;grid-template-columns:38px 1fr auto;gap:13px;align-items:start;
   padding:13px 18px;border-top:1px solid var(--line)}
 .qrow:first-of-type{border-top:0}
-.qid{font-family:var(--font-mono);font-size:12px;color:var(--ink-3);padding-top:2px}
+.qid{font-family:var(--font-ui);font-size:12px;color:var(--ink-3);padding-top:2px}
 .qtext{font-size:14.5px}
-.qmeta{margin-top:5px;font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
-.ans{font-family:var(--font-mono);font-size:11.5px;font-weight:600;letter-spacing:.06em;
+.qmeta{margin-top:5px;font-family:var(--font-ui);font-size:11px;color:var(--ink-3)}
+.ans{font-family:var(--font-ui);font-size:11.5px;font-weight:600;letter-spacing:.06em;
   border-radius:var(--r);padding:3px 9px;white-space:nowrap;border:1px solid}
 .ans.y{color:var(--yes);border-color:var(--yes);background:color-mix(in srgb,var(--yes) 9%,transparent)}
 .ans.n{color:var(--no);border-color:var(--no);background:color-mix(in srgb,var(--no) 9%,transparent)}
@@ -130,23 +149,23 @@ a{color:var(--accent)}
 
 /* ---------- cases ---------- */
 .tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
-.tab{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.03em;cursor:pointer;
+.tab{font-family:var(--font-ui);font-size:11.5px;letter-spacing:.03em;cursor:pointer;
   border:1px solid var(--line-2);background:var(--bg);color:var(--ink-2);
   border-radius:999px;padding:6px 13px}
 .tab:hover{border-color:var(--ink-3)}
-.tab[aria-selected="true"]{background:var(--dc);border-color:var(--dc);color:#fff}
+.tab[aria-selected="true"]{background:var(--dcf);border-color:var(--dc);color:var(--ink)}
 .frames{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;padding:16px 18px}
 @media (max-width:560px){.frames{grid-template-columns:1fr}}
 .frame figure{margin:0}
 .frame img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--r);
   border:1px solid var(--line);display:block;background:var(--surface-2)}
-.frame figcaption{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-3);
+.frame figcaption{font-family:var(--font-ui);font-size:10.5px;color:var(--ink-3);
   margin-top:5px;font-variant-numeric:tabular-nums}
 .judge{padding:15px 18px;border-top:1px solid var(--line)}
-.judge .lab{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;
+.judge .lab{font-family:var(--font-ui);font-size:10.5px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--ink-3);margin-bottom:5px}
 .qline{font-size:15px;line-height:1.5}
-.resp{margin-top:11px;font-family:var(--font-mono);font-size:12.5px;line-height:1.6;
+.resp{margin-top:11px;font-family:var(--font-code);font-size:12.5px;line-height:1.6;
   background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r);
   padding:11px 13px;color:var(--ink-2)}
 .resp b{color:var(--ink)}
@@ -163,15 +182,15 @@ a{color:var(--accent)}
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);
   background:var(--surface)}
 table{border-collapse:collapse;width:100%;min-width:560px;font-size:13.5px}
-caption{text-align:left;padding:13px 16px;font-family:var(--font-mono);font-size:11px;
+caption{text-align:left;padding:13px 16px;font-family:var(--font-ui);font-size:11px;
   letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);
   border-bottom:1px solid var(--line)}
 th,td{padding:9px 14px;text-align:right;border-top:1px solid var(--line)}
 th:first-child,td:first-child{text-align:left}
 thead th{font-weight:600;font-size:12px;color:var(--ink-2);border-top:0}
 thead tr:first-child th{border-bottom:1px solid var(--line)}
-tbody td{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
-tbody td:first-child{font-family:var(--font-body);font-weight:500}
+tbody td{font-family:var(--font-ui);font-variant-numeric:tabular-nums}
+tbody td:first-child{font-family:var(--font-ui);font-weight:500}
 tbody td.best{color:var(--accent);font-weight:600}
 .restables{display:grid;gap:18px}
 
@@ -183,23 +202,25 @@ tbody td.best{color:var(--accent);font-weight:600}
   font-size:13px}
 .dombar .nm{color:var(--ink-2)}
 .dombar .track{height:9px;background:var(--surface-3);border-radius:999px;overflow:hidden}
-.dombar .fill{height:100%;border-radius:999px}
-.dombar .ct{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-3);
+.dombar .fill{height:100%;border-radius:999px;border:1px solid;
+  background-clip:padding-box}
+.dombar .ct{font-family:var(--font-ui);font-size:11.5px;color:var(--ink-3);
   text-align:right;font-variant-numeric:tabular-nums}
 .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
-#q{flex:1 1 230px;min-width:0;font-family:var(--font-body);font-size:14px;
+#q{flex:1 1 230px;min-width:0;font-family:var(--font-ui);font-size:14px;
   padding:8px 12px;border:1px solid var(--line-2);border-radius:var(--r);
   background:var(--bg);color:var(--ink)}
 #q::placeholder{color:var(--ink-3)}
 .chips{display:flex;gap:6px;flex-wrap:wrap}
-.chip{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.03em;cursor:pointer;
+.chip{font-family:var(--font-ui);font-size:11.5px;letter-spacing:.03em;cursor:pointer;
   border:1px solid var(--line-2);background:var(--bg);color:var(--ink-2);
   border-radius:999px;padding:5px 11px}
 .chip:hover{border-color:var(--ink-3)}
 .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.chip[data-k][aria-pressed="true"]{background:var(--dc);border-color:var(--dc);color:#fff}
-:root[data-theme="dark"] .chip[data-k][aria-pressed="true"],
-.chip[data-k][aria-pressed="true"]{color:#fff}
+/* Domain chips fill with the figure color and keep page ink on top, rather than
+   white-on-pastel, which the lighter domains cannot carry at this size. */
+.chip[data-k][aria-pressed="true"]{background:var(--dcf);border-color:var(--dc);
+  color:var(--ink)}
 
 .explorer{display:grid;grid-template-columns:1fr 362px;gap:22px;align-items:start}
 @media (max-width:900px){.explorer{grid-template-columns:1fr}}
@@ -210,7 +231,7 @@ tbody td.best{color:var(--accent);font-weight:600}
 .card:hover{border-color:var(--line-2);border-left-color:var(--dc);background:var(--surface-2)}
 .card[aria-pressed="true"]{background:var(--surface-2);border-color:var(--dc)}
 .card .cn{font-weight:600;font-size:13.5px;letter-spacing:-.005em;line-height:1.3}
-.card .cm{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);
+.card .cm{font-family:var(--font-ui);font-size:11px;color:var(--ink-3);
   font-variant-numeric:tabular-nums}
 .card .cd{font-size:11.5px;color:var(--dc);font-weight:500}
 .empty{grid-column:1/-1;padding:28px 2px;color:var(--ink-3);font-size:14px}
@@ -218,35 +239,43 @@ tbody td.best{color:var(--accent);font-weight:600}
 .detail{border:1px solid var(--line);border-radius:var(--r);background:var(--bg);
   padding:18px;position:sticky;top:calc(16px + env(safe-area-inset-top,0px))}
 @media (max-width:900px){.detail{position:static;order:-1}}
-.detail h3{font-family:var(--font-display);font-size:20px;font-weight:600;
-  letter-spacing:-.015em;line-height:1.2}
-.dtag{display:inline-block;font-family:var(--font-mono);font-size:10.5px;
+.detail h3{font-family:var(--font-ui);font-size:20px;font-weight:600;
+  letter-spacing:-.022em;line-height:1.2}
+.dtag{display:inline-block;font-family:var(--font-ui);font-size:10.5px;
   letter-spacing:.07em;text-transform:uppercase;color:var(--dc);margin-bottom:7px}
 .dstats{display:flex;gap:16px;margin:13px 0;padding:11px 0;
   border-block:1px solid var(--line)}
-.dstats div b{display:block;font-family:var(--font-mono);font-size:16px;font-weight:600;
+.dstats div b{display:block;font-family:var(--font-ui);font-size:16px;font-weight:600;
   font-variant-numeric:tabular-nums}
 .dstats div span{font-size:11px;color:var(--ink-3)}
 .dblk{margin-top:14px}
-.dblk .lab{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;
+.dblk .lab{font-family:var(--font-ui);font-size:10.5px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--ink-3);margin-bottom:5px}
 .dblk p{margin:0;font-size:13.5px;line-height:1.55}
 .law{font-size:13px;color:var(--ink-2);border-left:2px solid var(--dc);padding-left:11px}
 .pool{display:flex;gap:5px;flex-wrap:wrap}
-.pool span{font-family:var(--font-mono);font-size:11px;color:var(--ink-2);
+.pool span{font-family:var(--font-ui);font-size:11px;color:var(--ink-2);
   background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r);
   padding:2px 7px}
 .dimrow{display:grid;grid-template-columns:118px 1fr 44px;gap:9px;align-items:center;
   font-size:12.5px;margin-bottom:4px}
 .dimrow .track{height:6px;background:var(--surface-3);border-radius:999px;overflow:hidden}
 .dimrow .fill{height:100%;background:var(--accent);border-radius:999px}
-.dimrow .ct{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);
+/* Difficulty keeps the three fixed colors the paper's figures assign it. */
+.dfbar{display:flex;height:9px;border-radius:999px;overflow:hidden;
+  border:1px solid var(--line)}
+.dfbar span{display:block;height:100%}
+.dfkey{display:flex;gap:13px;flex-wrap:wrap;margin-top:8px;font-size:11.5px;
+  color:var(--ink-2);font-variant-numeric:tabular-nums}
+.dfkey span{display:inline-flex;align-items:center;gap:5px}
+.dfkey i{width:8px;height:8px;border-radius:2px;flex:none}
+.dimrow .ct{font-family:var(--font-ui);font-size:11px;color:var(--ink-3);
   text-align:right;font-variant-numeric:tabular-nums}
 
 /* ---------- cite ---------- */
 .cite .wrap{padding-block:clamp(34px,5vw,54px)}
 pre{margin:0;overflow-x:auto;background:var(--surface-2);border:1px solid var(--line);
-  border-radius:var(--r);padding:15px 17px;font-family:var(--font-mono);font-size:12.5px;
+  border-radius:var(--r);padding:15px 17px;font-family:var(--font-code);font-size:12.5px;
   line-height:1.65;color:var(--ink-2)}
 footer{border-top:1px solid var(--line);background:var(--surface)}
 footer .wrap{padding-block:22px;font-size:12.5px;color:var(--ink-3);
@@ -288,7 +317,7 @@ footer .wrap{padding-block:22px;font-size:12.5px;color:var(--ink-3);
       <em>add affiliations</em></p>
     <div class="links">
       <a class="btn primary" href="#" id="lnk-paper">Paper</a>
-      <a class="btn" href="https://github.com/" id="lnk-code">Code</a>
+      <a class="btn" href="https://github.com/mengsiwei/PhyMetric" id="lnk-code">Code</a>
       <a class="btn" href="#" id="lnk-data">Dataset</a>
       <a class="btn" href="#taxonomy">Browse taxonomy</a>
     </div>
@@ -386,7 +415,10 @@ const EX = /*__EXAMPLE__*/null;
 const ABSTRACT = /*__ABSTRACT__*/null;
 const RESULTS = /*__RESULTS__*/null;
 const CASES = /*__CASES__*/null;
+/* Each domain resolves to a matched pair: ink for text and rules, fill for areas. */
 const dvar = k => `var(--d-${k})`;
+const dfill = k => `var(--d-${k}-f)`;
+const dpair = k => `--dc:${dvar(k)};--dcf:${dfill(k)}`;
 const KEY = Object.fromEntries(DOMAINS.map(d => [d.n, d.k]));
 const esc = s => String(s).replace(/[&<>"]/g, c =>
   ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -405,7 +437,7 @@ function renderCase() {
   const agreed = c.ans === c.truth;
   casetabs.innerHTML = CASES.map(x => `
     <button class="tab" type="button" role="tab" data-id="${x.id}"
-      aria-selected="${String(x.id === activeCase)}" style="--dc:${dvar(KEY[x.dom])}">
+      aria-selected="${String(x.id === activeCase)}" style="${dpair(KEY[x.dom])}">
       ${esc(x.cat.replace(/_/g, ' '))}</button>`).join('');
   scene.innerHTML = `
     <div class="scene-top">
@@ -468,7 +500,7 @@ document.getElementById('dombars').innerHTML = DOMAINS.map(d => `
   <div class="dombar">
     <div class="nm">${esc(d.n)}</div>
     <div class="track"><div class="fill" style="width:${(d.s / maxScenes * 100).toFixed(1)}%;
-      background:${dvar(d.k)}"></div></div>
+      background:${dfill(d.k)};border-color:${dvar(d.k)}"></div></div>
     <div class="ct">${d.c} cat &middot; ${d.s}</div>
   </div>`).join('');
 
@@ -478,7 +510,7 @@ const chips = document.getElementById('chips');
 chips.innerHTML =
   `<button class="chip" type="button" data-all aria-pressed="true">All ${TAX.totals.categories}</button>` +
   DOMAINS.map(d => `<button class="chip" type="button" data-k="${d.k}" data-dom="${esc(d.n)}"
-     aria-pressed="false" style="--dc:${dvar(d.k)}">${esc(d.n)} ${d.c}</button>`).join('');
+     aria-pressed="false" style="${dpair(d.k)}">${esc(d.n)} ${d.c}</button>`).join('');
 chips.addEventListener('click', e => {
   const b = e.target.closest('.chip'); if (!b) return;
   activeDomain = b.hasAttribute('data-all') ? null : b.dataset.dom;
@@ -495,7 +527,7 @@ let selected = null;
 const overview = () => {
   const mx = Math.max(...TAX.dimensions.map(d => d.c));
   const df = TAX.difficulty, dt = df.easy + df.medium + df.hard;
-  return `<div class="dtag" style="--dc:var(--accent)">How to read a card</div>
+  return `<div class="dtag" style="--dc:var(--accent);--dcf:var(--accent-soft)">How to read a card</div>
     <h3>Every question carries one or two dimensions</h3>
     <div class="dstats">
       <div><b>${dt.toLocaleString()}</b><span>questions tagged</span></div>
@@ -508,13 +540,17 @@ const overview = () => {
         <span class="ct">${d.c.toLocaleString()}</span></div>`).join('')}
     </div>
     <div class="dblk"><div class="lab">Difficulty</div>
-      <p>easy ${df.easy.toLocaleString()} &middot; medium ${df.medium.toLocaleString()}
-         &middot; hard ${df.hard.toLocaleString()}</p></div>`;
+      <div class="dfbar">${['easy', 'medium', 'hard'].map(g =>
+        `<span style="width:${(df[g] / dt * 100).toFixed(2)}%;background:var(--${g})"></span>`
+      ).join('')}</div>
+      <div class="dfkey">${['easy', 'medium', 'hard'].map(g =>
+        `<span><i style="background:var(--${g})"></i>${g} ${df[g].toLocaleString()}</span>`
+      ).join('')}</div></div>`;
 };
 
 const cardDetail = c => {
   const k = KEY[c.d];
-  return `<div class="dtag" style="--dc:${dvar(k)}">${esc(c.d)}</div>
+  return `<div class="dtag" style="${dpair(k)}">${esc(c.d)}</div>
     <h3>${esc(c.n.replace(/_/g, ' '))}</h3>
     <div class="dstats">
       <div><b>${c.s}</b><span>scenes</span></div>
@@ -523,7 +559,7 @@ const cardDetail = c => {
     </div>
     <div class="dblk"><p>${esc(c.desc)}</p></div>
     <div class="dblk"><div class="lab">Governing law</div>
-      <p class="law" style="--dc:${dvar(k)}">${esc(c.law)}</p></div>
+      <p class="law" style="${dpair(k)}">${esc(c.law)}</p></div>
     <div class="dblk"><div class="lab">Key dimensions</div>
       <div class="pool">${c.kd.map(d => `<span>${esc(d)}</span>`).join('')}</div></div>
     <div class="dblk"><div class="lab">Object pool</div>
@@ -545,7 +581,7 @@ function render() {
   grid.innerHTML = hits.length ? hits.map(c => {
     const k = KEY[c.d];
     return `<button class="card" type="button" data-n="${esc(c.n)}"
-       aria-pressed="${String(selected === c.n)}" style="--dc:${dvar(k)}">
+       aria-pressed="${String(selected === c.n)}" style="${dpair(k)}">
        <span class="cd">${esc(c.d)}</span>
        <span class="cn">${esc(c.n.replace(/_/g, ' '))}</span>
        <span class="cm">${c.s} scenes &middot; ${c.q} questions</span>
